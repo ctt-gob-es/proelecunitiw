@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:TiFlows="http://www.openbusinessengine.org/2003/TiFlows1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="idPagoTPV" Name="PagoTPV" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2012-02-20T09:25:10+0100</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="RELEASED">
+        <Author>mmhc</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <WorkflowProcesses>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="idPagoTPV" Name="idPagoTPV">
+            <ProcessHeader DurationUnit="m">
+                <Created>2012-02-20T09:25:53+0100</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>mmhc</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_interesado" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_codProcedimientoSIA" Index="2" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_rolValidador" Index="3" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_codigoProcedimientoPadre" Index="4" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_resultadoPago" Index="5" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="order" IsArray="FALSE" Name="order">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="store" IsArray="FALSE" Name="store">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="solicitanteNIF" IsArray="FALSE" Name="solicitanteNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="resultadoPago" IsArray="FALSE" Name="resultadoPago">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="error" IsArray="FALSE" Name="error">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="codProcedimientoSIA" IsArray="FALSE" Name="codProcedimientoSIA">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="actividadTramitada" IsArray="FALSE" Name="actividadTramitada">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>no</InitialValue>
+                </DataField>
+                <DataField Id="codigoProcedimiento" IsArray="FALSE" Name="codigoProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="sistema" Name="sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="Interesado" Name="Interesado">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$solicitanteNIF</Description>
+                </Participant>
+                <Participant Id="rolValidadorTransaccion" Name="rolValidadorTransaccion">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$fp_rolValidador</Description>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="generarCompraTPV" Name="generarCompraTPV">
+                    <FormalParameters>
+                        <FormalParameter Id="idCompra" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerIdentificadorTPV" Name="obtenerIdentificadorTPV">
+                    <FormalParameters>
+                        <FormalParameter Id="identificadorTPV" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerEstadoCompra" Name="obtenerEstadoCompra">
+                    <FormalParameters>
+                        <FormalParameter Id="store" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="order" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="resultadoTPV" Index="2" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="tramitarActividad" Name="tramitarActividad">
+                    <FormalParameters>
+                        <FormalParameter Id="actividad" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="usuario" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoUsuariosRol" Name="mandaCorreoUsuariosRol">
+                    <FormalParameters>
+                        <FormalParameter Id="rol" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveAsunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveCuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+            </Applications>
+            <Activities>
+                <Activity Id="idInicializar" Name="Inicializar">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fp_interesado</ActualParameter>
+                                <ActualParameter>solicitanteNIF</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fp_codProcedimientoSIA</ActualParameter>
+                                <ActualParameter>codProcedimientoSIA</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fp_codigoProcedimientoPadre</ActualParameter>
+                                <ActualParameter>codigoProcedimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="194,41"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idObtenerIDTienda" Name="Obtener identidicador de tienda">
+                    <Implementation>
+                        <Tool Id="obtenerIdentificadorTPV" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>store</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="316,43"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idHaEncontradoIDTienda" Name="¿Ha encontrado id tienda?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra5"/>
+                                    <TransitionRef Id="idPagoTPV_tra10"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="429,45"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idGenerarCompra" Name="Generar compra">
+                    <Implementation>
+                        <Tool Id="generarCompraTPV" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>order</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="431,140"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRealizarPagoTPV" Name="1.0. Realizar el Pago">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra29"/>
+                                    <TransitionRef Id="idPagoTPV_tra8"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="695,50"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idObtenerResultadoPago" Name="Obtener resultado del pago">
+                    <Implementation>
+                        <Tool Id="obtenerEstadoCompra" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$store</ActualParameter>
+                                <ActualParameter>$order</ActualParameter>
+                                <ActualParameter>fp_resultadoPago</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1070,160"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idHaGeneradoCompra" Name="¿Ha generado compra?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra7"/>
+                                    <TransitionRef Id="idPagoTPV_tra11"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="568,143"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idPagoImposibilitado" Name="Pago imposibilitado">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"2"</ActualParameter>
+                                <ActualParameter>fp_resultadoPago</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="568,48"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFIN" Name="AUTOFIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1269,56"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInformarPagoNoDisponible" Name="2.0. Informar pago no disponible">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1385,56"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idResultadoIndeterminado" Name="¿Resultado indeterminado?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra9"/>
+                                    <TransitionRef Id="idPagoTPV_tra3"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolValidadorTransaccion"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1073,59"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizacionManualEstadoPago" Name="3.0. Actualizacion manual estado pago">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolValidadorTransaccion</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolValidadorTransaccion"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1217,57"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizarResultadoPago" Name="Actualizar resultado pago">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$resultadoPago</ActualParameter>
+                                <ActualParameter>fp_resultadoPago</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1269,135"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAvanzarPago" Name="4.0 Avanzar Pago">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolValidadorTransaccion</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra18"/>
+                                    <TransitionRef Id="idPagoTPV_tra30"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolValidadorTransaccion"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="370,72"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idDIVIDIR" Name="DIVIDIR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolValidadorTransaccion</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="AND">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra16"/>
+                                    <TransitionRef Id="idPagoTPV_tra17"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolValidadorTransaccion"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="612,73"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitarPago" Name="Tramitar Pago">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>actividadTramitada</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idRealizarPagoTPV"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="224,247"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitarAvanzar" Name="Tramitar Avanzar">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>actividadTramitada</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idAvanzarPago"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="838,254"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFINPAGO" Name="AUTO FIN PAGO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolValidadorTransaccion</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="AND"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolValidadorTransaccion"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="967,44"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitada" Name="¿Tramitada?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra22"/>
+                                    <TransitionRef Id="idPagoTPV_tra23"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="371,248"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFinAvanzar" Name="FIN AVANZAR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="227,154"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitada1" Name="¿Tramitada?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idPagoTPV_tra25"/>
+                                    <TransitionRef Id="idPagoTPV_tra26"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="694,256"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINPAGO" Name="FIN PAGO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="833,165"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEsperaTimeRule" Name="Espera Time Rule">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="AND"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="367,51"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="idInicializar" Id="idPagoTPV_tra1" To="idObtenerIDTienda">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idObtenerIDTienda" Id="idPagoTPV_tra4" To="idHaEncontradoIDTienda">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaEncontradoIDTienda" Id="idPagoTPV_tra5" To="idGenerarCompra">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idGenerarCompra" Id="idPagoTPV_tra6" To="idHaGeneradoCompra">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaGeneradoCompra" Id="idPagoTPV_tra7" To="idDIVIDIR">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="669,167"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRealizarPagoTPV" Id="idPagoTPV_tra8" To="idTramitada1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaEncontradoIDTienda" Id="idPagoTPV_tra10" To="idPagoImposibilitado">
+                    <Condition Type="CONDITION">$store=""</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaGeneradoCompra" Id="idPagoTPV_tra11" To="idPagoImposibilitado">
+                    <Condition Type="CONDITION">$order=""</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idPagoImposibilitado" Id="idPagoTPV_tra12" To="idInformarPagoNoDisponible">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1419,66"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idObtenerResultadoPago" Id="idPagoTPV_tra13" To="idResultadoIndeterminado">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idInformarPagoNoDisponible" Id="idPagoTPV_tra2" To="idAUTOFIN">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idResultadoIndeterminado" Id="idPagoTPV_tra3" To="idActualizacionManualEstadoPago">
+                    <Condition Type="CONDITION">$fp_resultadoPago="2"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1170,394"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idResultadoIndeterminado" Id="idPagoTPV_tra9" To="idAUTOFIN">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1113,545"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizacionManualEstadoPago" Id="idPagoTPV_tra14" To="idActualizarResultadoPago">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1248,161"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizarResultadoPago" Id="idPagoTPV_tra15" To="idAUTOFIN">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idDIVIDIR" Id="idPagoTPV_tra16" To="idAvanzarPago">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idDIVIDIR" Id="idPagoTPV_tra17" To="idRealizarPagoTPV">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="716,424"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAvanzarPago" Id="idPagoTPV_tra18" To="idTramitada">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFinAvanzar" Id="idPagoTPV_tra19" To="idAUTOFINPAGO">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="200,184-193,624-1010,624"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINPAGO" Id="idPagoTPV_tra20" To="idAUTOFINPAGO">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="994,176"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTOFINPAGO" Id="idPagoTPV_tra21" To="idObtenerResultadoPago">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1011,173"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitada" Id="idPagoTPV_tra22" To="idFinAvanzar">
+                    <Condition Type="CONDITION">actividadTramitada="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="408,178"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitada" Id="idPagoTPV_tra23" To="idTramitarPago">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitarPago" Id="idPagoTPV_tra24" To="idFinAvanzar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitada1" Id="idPagoTPV_tra25" To="idFINPAGO">
+                    <Condition Type="CONDITION">actividadTramitada="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="745,177"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitada1" Id="idPagoTPV_tra26" To="idTramitarAvanzar">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitarAvanzar" Id="idPagoTPV_tra27" To="idFINPAGO">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRealizarPagoTPV" Id="idPagoTPV_tra29" To="idEsperaTimeRule">
+                    <Condition Type="EXCEPTION">wait(10,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAvanzarPago" Id="idPagoTPV_tra30" To="idEsperaTimeRule">
+                    <Condition Type="EXCEPTION">wait(10,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEsperaTimeRule" Id="idPagoTPV_tra31" To="idObtenerResultadoPago">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="411,593-932,592-932,201"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=Interesado,CONNECTING_ACTIVITY_ID=idAUTOFIN,X_OFFSET=1303,Y_OFFSET=131,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="EndOfWorkflow" Value="Interesado;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idInicializar,X_OFFSET=95,Y_OFFSET=51,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="sistema;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="sistema;rolValidadorTransaccion;Interesado"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:TiFlows="http://www.openbusinessengine.org/2003/TiFlows1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="idDesestimacion" Name="Desestimacion" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2012-03-23T08:50:57+0100</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="RELEASED">
+        <Author>mmhc</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <WorkflowProcesses>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="idDesestimacion" Name="Desestimacion">
+            <ProcessHeader DurationUnit="m">
+                <Created>2012-03-23T08:51:59+0100</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>mmhc</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_tipoLogado" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_destinatarioFinalizacion" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_errorInteresado" Index="2" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_errorFuncionario" Index="3" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="fp_tipoFinalizacion" Index="4" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="errorInteresado" IsArray="FALSE" Name="errorInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>errorInteresadooo</InitialValue>
+                </DataField>
+                <DataField Id="errorFuncionario" IsArray="FALSE" Name="errorFuncionario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>errorFuncionariooo</InitialValue>
+                </DataField>
+                <DataField Id="tipoLogado" IsArray="FALSE" Name="tipoLogado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_IdInteresado" IsArray="FALSE" Name="registro_IdInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NifInteresado" IsArray="FALSE" Name="registro_NifInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NombreInteresado" IsArray="FALSE" Name="registro_NombreInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Apellido1Interesado" IsArray="FALSE" Name="registro_Apellido1Interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Apellido2Interesado" IsArray="FALSE" Name="registro_Apellido2Interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_IdDomicilio" IsArray="FALSE" Name="registro_IdDomicilio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NombreDomicilio" IsArray="FALSE" Name="registro_NombreDomicilio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Resumen" IsArray="FALSE" Name="registro_Resumen">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_refExpediente" IsArray="FALSE" Name="registro_refExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Origen" IsArray="FALSE" Name="registro_Origen">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Destino" IsArray="FALSE" Name="registro_Destino">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="sistema" Name="sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="DestinatarioFinalizacion" Name="DestinatarioFinalizacion">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$fp_destinatarioFinalizacion</Description>
+                </Participant>
+                <Participant Id="rolFicticio" Name="rolFicticio">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$ultimo</Description>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="generarDocumentoFinalizacion" Name="generarDocumentoFinalizacion">
+                    <FormalParameters>
+                        <FormalParameter Id="tipoFinalizacion" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+            </Applications>
+            <Activities>
+                <Activity Id="idInicializarVariables" Name="Inicializar variables">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fp_tipoLogado</ActualParameter>
+                                <ActualParameter>tipoLogado</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fp_errorFuncionario</ActualParameter>
+                                <ActualParameter>errorFuncionario</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fp_errorInteresado</ActualParameter>
+                                <ActualParameter>errorInteresado</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="287,58"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFIN" Name="AUTOFIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="550,60"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idGenerarFinalizacion" Name="Generar finalizacion">
+                    <Implementation>
+                        <Tool Id="generarDocumentoFinalizacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fp_tipoFinalizacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="403,55"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInformarFinalizacionInteresado" Name="1.0. Informar finalizacion interesado">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>DestinatarioFinalizacion</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="DestinatarioFinalizacion"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="403,41"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInstanciarSubproceso" Name="idInstanciarSubproceso">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolFicticio</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolFicticio"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="286,58"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="idInicializarVariables" Id="idDesestimacionb_tra1" To="idGenerarFinalizacion">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idGenerarFinalizacion" Id="idDesestimacion_tra20" To="idInformarFinalizacionInteresado">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idInformarFinalizacionInteresado" Id="idDesestimacion_tra21" To="idAUTOFIN">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="592,359"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idInstanciarSubproceso" Id="idDesestimacion_tra32" To="idInicializarVariables">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idInstanciarSubproceso,X_OFFSET=70,Y_OFFSET=39,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="sistema;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idAUTOFIN,X_OFFSET=672,Y_OFFSET=72,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="EndOfWorkflow" Value="sistema;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="rolFicticio;sistema;DestinatarioFinalizacion"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>

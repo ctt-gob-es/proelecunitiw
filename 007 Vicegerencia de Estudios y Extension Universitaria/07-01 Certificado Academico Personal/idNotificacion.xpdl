@@ -1,0 +1,1800 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="idNotificacion" Name="002-017 Notificacion" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2012-08-16 14:02:11</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="RELEASED">
+        <Author>mmhc</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <WorkflowProcesses>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="idNotificacion" Name="002-017 Notificacion">
+            <ProcessHeader>
+                <Created>2012-08-16 14:03:10</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>mmhc</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfMetodoNotificacion" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfRolAdministrativoDinamico" Index="2" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfRefuhaNotificacion" Index="3" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioNumIdentificacion" Index="4" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioNombre" Index="5" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioApellido1" Index="6" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioApellido2" Index="7" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioMail" Index="8" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfIinteresadoNombreCompleto" Index="9" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfInteresadoNumIdentificacion" Index="10" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDomicilioCompletoNotificaciones" Index="11" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfNombreDocNotificar" Index="12" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfFechaNotificacion" Index="13" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfEstadoNotificacion" Index="14" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="metodoNotificacion" IsArray="FALSE" Name="metodoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="rolAdministrativo" IsArray="FALSE" Name="rolAdministrativo">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="refuhaNotificacion" IsArray="FALSE" Name="refuhaNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNumIdentificacion" IsArray="FALSE" Name="destinatarioNumIdentificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombreCompleto" IsArray="FALSE" Name="destinatarioNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombre" IsArray="FALSE" Name="destinatarioNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido1" IsArray="FALSE" Name="destinatarioApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido2" IsArray="FALSE" Name="destinatarioApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioMail" IsArray="FALSE" Name="destinatarioMail">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombreCompleto" IsArray="FALSE" Name="interesadoNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNumIdentificacion" IsArray="FALSE" Name="interesadoNumIdentificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="domicilioCompletoNotificaciones" IsArray="FALSE" Name="domicilioCompletoNotificaciones">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="nombreDocNotificar" IsArray="FALSE" Name="nombreDocNotificar">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fecha1Intento" IsArray="FALSE" Name="fecha1Intento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fecha2Intento" IsArray="FALSE" Name="fecha2Intento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="necesarioPublicarBO" IsArray="FALSE" Name="necesarioPublicarBO">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="boletinPublicacion" IsArray="FALSE" Name="boletinPublicacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numeroBO" IsArray="FALSE" Name="numeroBO">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaPublicacionBO" IsArray="FALSE" Name="fechaPublicacionBO">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="observaciones" IsArray="FALSE" Name="observaciones">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="asuntoNotificacion" IsArray="FALSE" Name="asuntoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacionPresencial" IsArray="FALSE" Name="estadoNotificacionPresencial">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacionTradicional" IsArray="FALSE" Name="estadoNotificacionTradicional">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaLectura" IsArray="FALSE" Name="fechaLectura">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaNotificacion" IsArray="FALSE" Name="fechaNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacion" IsArray="FALSE" Name="estadoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tramitaCiudadano" IsArray="FALSE" Name="tramitaCiudadano">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tramitaFuncionario" IsArray="FALSE" Name="tramitaFuncionario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaInicioNotificacion" IsArray="FALSE" Name="fechaInicioNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="error" IsArray="FALSE" Name="error">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="aplicativoError" IsArray="FALSE" Name="aplicativoError">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="sistema" Name="sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="Destinatario" Name="Destinatario">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$destinatarioNumIdentificacion</Description>
+                </Participant>
+                <Participant Id="AREA_CENTRO_Adm" Name="AREA_CENTRO_Adm">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$rolAdministrativo</Description>
+                </Participant>
+                <Participant Id="sistema1" Name="sistema1">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="REFUHA" Name="REFUHA">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$refuhaNotificacion</Description>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoNotificacionPresencial" Name="mandaCorreoNotificacionPresencial">
+                    <FormalParameters>
+                        <FormalParameter Id="para" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoNotificacionElectronica" Name="mandaCorreoNotificacionElectronica">
+                    <FormalParameters>
+                        <FormalParameter Id="para" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="tramitarActividad" Name="tramitarActividad">
+                    <FormalParameters>
+                        <FormalParameter Id="definicionActividad" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="usuario" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerFechaLectura" Name="obtenerFechaLectura">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="usuario" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="fechaLectura" Index="2" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerFechaActual" Name="obtenerFechaActual">
+                    <FormalParameters>
+                        <FormalParameter Id="separador" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="fechaActual" Index="1" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="publicarNotificacionTablon" Name="publicarNotificacionTablon"/>
+                <Application Id="generarInformeNotificacion" Name="generarInformeNotificacion"/>
+                <Application Id="obtenerAsuntoNotificacion" Name="obtenerAsuntoNotificacion">
+                    <FormalParameters>
+                        <FormalParameter Id="asunto" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="cambiaTipoAnexoToArchivo" Name="cambiaTipoAnexoToArchivo">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="textoNuevo" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="actualizaAmbito" Name="actualizaAmbito">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="ambitoPrivado" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+            </Applications>
+            <Activities>
+                <Activity Id="idTipoNotificacion" Name="¿Tipo Notificacion?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra2"/>
+                                    <TransitionRef Id="idNotificacion_tra3"/>
+                                    <TransitionRef Id="idNotificacion_tra4"/>
+                                    <TransitionRef Id="idNotificacion_tra5"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="640,135"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionElectronica" Name="Notificacion Electrónica">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1036,137"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idPublicacionBO" Name="Publicacion BO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="643,521"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionTradicional" Name="Notificacion Tradicional">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="314,522"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionPresencial" Name="Notificacion Presencial">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="168,135"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFIN" Name="AUTO FIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1739,209"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializaVariables" Name="Inicializa Variables">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioApellido1</ActualParameter>
+                                <ActualParameter>destinatarioApellido1</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioApellido2</ActualParameter>
+                                <ActualParameter>destinatarioApellido2</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioMail</ActualParameter>
+                                <ActualParameter>destinatarioMail</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioNombre</ActualParameter>
+                                <ActualParameter>destinatarioNombre</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioNumIdentificacion</ActualParameter>
+                                <ActualParameter>destinatarioNumIdentificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDomicilioCompletoNotificaciones</ActualParameter>
+                                <ActualParameter>domicilioCompletoNotificaciones</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfIinteresadoNombreCompleto</ActualParameter>
+                                <ActualParameter>interesadoNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfInteresadoNumIdentificacion</ActualParameter>
+                                <ActualParameter>interesadoNumIdentificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfMetodoNotificacion</ActualParameter>
+                                <ActualParameter>metodoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfRolAdministrativoDinamico</ActualParameter>
+                                <ActualParameter>rolAdministrativo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfNombreDocNotificar</ActualParameter>
+                                <ActualParameter>nombreDocNotificar</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerAsuntoNotificacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>asuntoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerFechaActual" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"-"</ActualParameter>
+                                <ActualParameter>fechaInicioNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombre, " ")</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombreCompleto, $destinatarioApellido1)</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombreCompleto, " ")</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombreCompleto, $destinatarioApellido2)</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaAmbito" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$nombreDocNotificar</ActualParameter>
+                                <ActualParameter>"true"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="publicarNotificacionTablon" Type="APPLICATION"/>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfRefuhaNotificacion</ActualParameter>
+                                <ActualParameter>refuhaNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="638,52"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEnviaMailCortesiaPresencial" Name="Envia Mail Cortesia Presencial">
+                    <Implementation>
+                        <Tool Id="mandaCorreoNotificacionPresencial" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$destinatarioMail</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="169,326"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRellenarAcuseReciboPresencial" Name="1.0. Rellenar Acuse Recibo Presencial">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="168,23"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEstadoNotificacionPresencial" Name="¿Estado Notificacion Presencial?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra12"/>
+                                    <TransitionRef Id="idNotificacion_tra13"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="REFUHA"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="169,48"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idPresencialRechazada" Name="Presencial Rechazada">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Rechazo Presencial"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"rechazada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="96,46"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idPresencialNotificada" Name="Presencial Notificada">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Notificado Presencial"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"realizada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="242,47"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEnviarNotificacionMediosHabituales" Name="2.0. Enviar Notificacion Medios Habituales">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="315,47"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTradicionalRechazada" Name="Tradicional Rechazada">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Rechazo Tradicional"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"rechazada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="429,43"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTradicionalNotificada" Name="Tradicional Notificada">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Notificado Tradicional"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"realizada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="533,47"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEstadoNotificacionTradicional" Name="¿Estado Notificacion Tradicional?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra17"/>
+                                    <TransitionRef Id="idNotificacion_tra18"/>
+                                    <TransitionRef Id="idNotificacion_tra15"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="428,49"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idBoletinPublicado" Name="Boletin Publicado">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Notificado por Publicacion en Boletin"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"realizada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="645,52"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idPublicacionBoletin" Name="3.0. Publicacion en Boletin">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="643,85"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCmbiaAmbitoEnviaMail" Name="Cambiar Ambito y Envia Mail">
+                    <Implementation>
+                        <Tool Id="actualizaAmbito" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$nombreDocNotificar</ActualParameter>
+                                <ActualParameter>"false"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoNotificacionElectronica" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$destinatarioMail</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1036,267"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificar" Name="NOTIFICAR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="AND">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra23"/>
+                                    <TransitionRef Id="idNotificacion_tra22"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1037,518"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRecepcionNotificacionElectronica" Name="4.0. RecepcionNotificacion Electronica">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Destinatario</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra30"/>
+                                    <TransitionRef Id="idNotificacion_tra24"/>
+                                    <TransitionRef Id="idNotificacion_tra33"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Destinatario"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1038,29"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRecabarFirmaInteresadoElectronica" Name="5.1. Recabar Firma Interesado Electronica">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>REFUHA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="REFUHA"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="758,18"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFINPLAZONOTIFICACION" Name="AUTOFIN PLAZO NOTIFICACION">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Destinatario</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Destinatario"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1152,29"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idObtenerFechaLectura" Name="ObtenerFechaLectura">
+                    <Implementation>
+                        <Tool Id="obtenerFechaLectura" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$nombreDocNotificar</ActualParameter>
+                                <ActualParameter>$destinatarioNumIdentificacion</ActualParameter>
+                                <ActualParameter>fechaLectura</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1239,436"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idHaAbiertoElDocumento" Name="¿Ha Abierto el Documento?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra28"/>
+                                    <TransitionRef Id="idNotificacion_tra29"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1359,438"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idElectronicaNotificada" Name="Electronica Notificada">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Notificado Electronico"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fechaLectura</ActualParameter>
+                                <ActualParameter>fechaNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"realizada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1360,526"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idElectronicaRechazada" Name="Electronica Rechazada">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Rechazo Electronico"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerFechaActual" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"-"</ActualParameter>
+                                <ActualParameter>fechaNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"rechazada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1501,329"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitarActividadFuncionario" Name="Tramitar Notif Electr Funcionario">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>tramitaCiudadano</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idRellenarAcuseReciboElectronica"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idRecabarFirmaInteresadoElectronica"</ActualParameter>
+                                <ActualParameter>$destinatarioNumIdentificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="932,29"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idESPERATRAMITACION" Name="ESPERA TRAMITACION">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="AND"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1042,122"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitarActividadCiudadano" Name="Tramitar Notif Electr Ciudadano">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>tramitaFuncionario</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idRecepcionNotificacionElectronica"</ActualParameter>
+                                <ActualParameter>$destinatarioNumIdentificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="758,48"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINCIUDADANO" Name="FINCIUDADANO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1040,33"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINFUNCIONARIO" Name="FINFUNCIONARIO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Destinatario</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Destinatario"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="872,31"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idHaTramitadoFuncionario" Name="¿Ha Tramitado Funcionario?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra39"/>
+                                    <TransitionRef Id="idNotificacion_tra40"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1241,122"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINELECTRONICA" Name="FIN ELECTRONICA">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Destinatario</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Destinatario"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1503,51"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINPRESENCIAL" Name="FINPRESENCIAL">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="241,333"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINTRADICIONAL" Name="FINTRADICIONAL">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="533,266"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINTBOLETIN" Name="FINBOLETIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="645,204"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idComparecenciaNotificada" Name="Comparecencia Notificada">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Notificado Electrónico"</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"realizada"</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1504,125"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizaParametrosSalida" Name="Actualiza Parametros Salida">
+                    <Implementation>
+                        <Tool Id="actualizaAmbito" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$nombreDocNotificar</ActualParameter>
+                                <ActualParameter>"false"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fechaNotificacion</ActualParameter>
+                                <ActualParameter>pfFechaNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="generarInformeNotificacion" Type="APPLICATION"/>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"002-017 Acuse de Recibo.pdf"</ActualParameter>
+                                <ActualParameter>$fechaNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1618,206"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRecabarFirmaInteresadoPresencial" Name="1.1. Recabar Firma Interesado Presencial">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="166,108"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRellenarAcuseReciboElectronica" Name="5.0. Rellenar Acuse Recibo Electronica">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>REFUHA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idNotificacion_tra34"/>
+                                    <TransitionRef Id="idNotificacion_tra25"/>
+                                    <TransitionRef Id="idNotificacion_tra32"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="REFUHA"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="873,17"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="idTipoNotificacion" Id="idNotificacion_tra2" To="idNotificacionPresencial">
+                    <Condition Type="CONDITION">$metodoNotificacion="presencial"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTipoNotificacion" Id="idNotificacion_tra3" To="idNotificacionTradicional">
+                    <Condition Type="CONDITION">$metodoNotificacion="tradicional"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="361,174"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTipoNotificacion" Id="idNotificacion_tra4" To="idPublicacionBO">
+                    <Condition Type="CONDITION">$metodoNotificacion="publicacionBO"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTipoNotificacion" Id="idNotificacion_tra5" To="idNotificacionElectronica">
+                    <Condition Type="CONDITION">$metodoNotificacion="electronica"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificacionElectronica" Id="idNotificacion_tra6" To="idCmbiaAmbitoEnviaMail">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificacionTradicional" Id="idNotificacion_tra8" To="idEnviarNotificacionMediosHabituales">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificacionPresencial" Id="idNotificacion_tra9" To="idEnviaMailCortesiaPresencial">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idInicializaVariables" Id="idNotificacion_tra1" To="idTipoNotificacion">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEnviaMailCortesiaPresencial" Id="idNotificacion_tra10" To="idRellenarAcuseReciboPresencial">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRellenarAcuseReciboPresencial" Id="idNotificacion_tra11" To="idRecabarFirmaInteresadoPresencial">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEstadoNotificacionPresencial" Id="idNotificacion_tra12" To="idPresencialRechazada">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="132,832"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEstadoNotificacionPresencial" Id="idNotificacion_tra13" To="idPresencialNotificada">
+                    <Condition Type="CONDITION">$estadoNotificacionPresencial="notificado"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="289,836"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEnviarNotificacionMediosHabituales" Id="idNotificacion_tra14" To="idEstadoNotificacionTradicional">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEstadoNotificacionTradicional" Id="idNotificacion_tra15" To="idPublicacionBO">
+                    <Condition Type="CONDITION">$estadoNotificacionTradicional="publicacionBO"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="466,547"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEstadoNotificacionTradicional" Id="idNotificacion_tra17" To="idTradicionalRechazada">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEstadoNotificacionTradicional" Id="idNotificacion_tra18" To="idTradicionalNotificada">
+                    <Condition Type="CONDITION">$estadoNotificacionTradicional="notificado"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="578,661"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idPublicacionBO" Id="idNotificacion_tra19" To="idPublicacionBoletin">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idPublicacionBoletin" Id="idNotificacion_tra20" To="idBoletinPublicado">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idCmbiaAmbitoEnviaMail" Id="idNotificacion_tra7" To="idNotificar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificar" Id="idNotificacion_tra22" To="idRecepcionNotificacionElectronica">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificar" Id="idNotificacion_tra23" To="idRellenarAcuseReciboElectronica">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="917,532"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecepcionNotificacionElectronica" Id="idNotificacion_tra24" To="idAUTOFINPLAZONOTIFICACION">
+                    <Condition Type="EXCEPTION">wait(10,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRellenarAcuseReciboElectronica" Id="idNotificacion_tra25" To="idAUTOFINPLAZONOTIFICACION">
+                    <Condition Type="EXCEPTION">wait(10,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1192,805"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTOFINPLAZONOTIFICACION" Id="idNotificacion_tra26" To="idObtenerFechaLectura">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1208,453"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idObtenerFechaLectura" Id="idNotificacion_tra27" To="idHaAbiertoElDocumento">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaAbiertoElDocumento" Id="idNotificacion_tra28" To="idElectronicaRechazada">
+                    <Condition Type="CONDITION">$fechaLectura=""</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1399,359"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaAbiertoElDocumento" Id="idNotificacion_tra29" To="idElectronicaNotificada">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecepcionNotificacionElectronica" Id="idNotificacion_tra30" To="idFINCIUDADANO">
+                    <Condition Type="CONDITION">$tramitaFuncionario="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitarActividadFuncionario" Id="idNotificacion_tra31" To="idFINCIUDADANO">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRellenarAcuseReciboElectronica" Id="idNotificacion_tra32" To="idFINFUNCIONARIO">
+                    <Condition Type="CONDITION">$tramitaCiudadano="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecepcionNotificacionElectronica" Id="idNotificacion_tra33" To="idTramitarActividadFuncionario">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="971,980"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRellenarAcuseReciboElectronica" Id="idNotificacion_tra34" To="idRecabarFirmaInteresadoElectronica">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitarActividadCiudadano" Id="idNotificacion_tra35" To="idFINFUNCIONARIO">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="814,971"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINFUNCIONARIO" Id="idNotificacion_tra36" To="idESPERATRAMITACION">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="917,1206"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINCIUDADANO" Id="idNotificacion_tra37" To="idESPERATRAMITACION">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idESPERATRAMITACION" Id="idNotificacion_tra38" To="idHaTramitadoFuncionario">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaTramitadoFuncionario" Id="idNotificacion_tra39" To="idObtenerFechaLectura">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idHaTramitadoFuncionario" Id="idNotificacion_tra40" To="idComparecenciaNotificada">
+                    <Condition Type="CONDITION">$tramitaFuncionario="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idElectronicaRechazada" Id="idNotificacion_tra41" To="idFINELECTRONICA">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idElectronicaNotificada" Id="idNotificacion_tra42" To="idFINELECTRONICA">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1396,993"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idPresencialRechazada" Id="idNotificacion_tra43" To="idFINPRESENCIAL">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="131,1414"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idPresencialNotificada" Id="idNotificacion_tra44" To="idFINPRESENCIAL">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTradicionalRechazada" Id="idNotificacion_tra45" To="idFINTRADICIONAL">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="471,1367"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTradicionalNotificada" Id="idNotificacion_tra46" To="idFINTRADICIONAL">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idBoletinPublicado" Id="idNotificacion_tra47" To="idFINTBOLETIN">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idComparecenciaNotificada" Id="idNotificacion_tra48" To="idFINELECTRONICA">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINELECTRONICA" Id="idNotificacion_tra49" To="idActualizaParametrosSalida">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1653,996"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINTBOLETIN" Id="idNotificacion_tra50" To="idActualizaParametrosSalida">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINTRADICIONAL" Id="idNotificacion_tra51" To="idActualizaParametrosSalida">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1633,1368"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINPRESENCIAL" Id="idNotificacion_tra52" To="idActualizaParametrosSalida">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1671,1412"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizaParametrosSalida" Id="idNotificacion_tra53" To="idAUTOFIN">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecabarFirmaInteresadoPresencial" Id="idNotificacion_tra16" To="idEstadoNotificacionPresencial">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecabarFirmaInteresadoElectronica" Id="idNotificacion_tra54" To="idTramitarActividadCiudadano">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema1,CONNECTING_ACTIVITY_ID=idAUTOFIN,X_OFFSET=1868,Y_OFFSET=220,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="EndOfWorkflow" Value="sistema1;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idInicializaVariables,X_OFFSET=545,Y_OFFSET=62,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="sistema;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="sistema;AREA_CENTRO_Adm;REFUHA;Destinatario;sistema1"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>
