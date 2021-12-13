@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="idRetiradaMaterialInformatico" Name="08-03 Retirada de Material Informatico" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2018-12-10 16:22:54</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="RELEASED">
+        <Author>zsr</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <ExternalPackages>
+        <ExternalPackage href="idNotificacion.xpdl">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="EXTERNAL_PACKAGE_ID" Value="idNotificacion"/>
+            </ExtendedAttributes>
+        </ExternalPackage>
+    </ExternalPackages>
+    <WorkflowProcesses>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="idRetiradaMaterialInformatico" Name="08-03 Retirada de Material Informatico">
+            <ProcessHeader>
+                <Created>2018-12-10 16:25:36</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>zsr</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="tipoDeLogado" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="codigoProcedimiento" IsArray="FALSE" Name="codigoProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>08-03</InitialValue>
+                </DataField>
+                <DataField Id="metadatoIdentificativoExpediente" IsArray="FALSE" Name="metadatoIdentificativoExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="nombreProcedimiento" IsArray="FALSE" Name="nombreProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interno_tiempoMedioFinalizacion" IsArray="FALSE" Name="interno_tiempoMedioFinalizacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesado" IsArray="FALSE" Name="interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNIF" IsArray="FALSE" Name="interesadoNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombre" IsArray="FALSE" Name="interesadoNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoApellido1" IsArray="FALSE" Name="interesadoApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoApellido2" IsArray="FALSE" Name="interesadoApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombreCompleto" IsArray="FALSE" Name="interesadoNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="mailAvisos" IsArray="FALSE" Name="mailAvisos">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numeroMovil" IsArray="FALSE" Name="numeroMovil">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numeroTelefonoFijo" IsArray="FALSE" Name="numeroTelefonoFijo">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tipoRegimenJuridico" IsArray="FALSE" Name="tipoRegimenJuridico">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="faceta" IsArray="FALSE" Name="faceta">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="ubicacion" IsArray="FALSE" Name="ubicacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="ticketAsociado" IsArray="FALSE" Name="ticketAsociado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="metodoNotificacion" IsArray="FALSE" Name="metodoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaNotificacion" IsArray="FALSE" Name="fechaNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacion" IsArray="FALSE" Name="estadoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="etapa" IsArray="FALSE" Name="etapa">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="situacion" IsArray="FALSE" Name="situacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="idExpedienteCompra" IsArray="FALSE" Name="idExpedienteCompra">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="descripcionExpedienteCompra" IsArray="FALSE" Name="descripcionExpedienteCompra">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="usuarioNIF" IsArray="FALSE" Name="usuarioNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="usuarioNombre" IsArray="FALSE" Name="usuarioNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="usuarioApellido1" IsArray="FALSE" Name="usuarioApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="usuarioApellido2" IsArray="FALSE" Name="usuarioApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="usuarioNombreCompleto" IsArray="FALSE" Name="usuarioNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="mailUsuario" IsArray="FALSE" Name="mailUsuario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="ubicacionUsuario" IsArray="FALSE" Name="ubicacionUsuario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="telefonoFijoUsuario" IsArray="FALSE" Name="telefonoFijoUsuario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="movilUsuario" IsArray="FALSE" Name="movilUsuario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="facetaUsuario" IsArray="FALSE" Name="facetaUsuario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tipoRegimenJuridicoUsuario" IsArray="FALSE" Name="tipoRegimenJuridicoUsuario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="ticketAsociadoUsuario" IsArray="FALSE" Name="ticketAsociadoUsuario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaNotificacionResponsable" IsArray="FALSE" Name="fechaNotificacionResponsable">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacionResponsable" IsArray="FALSE" Name="estadoNotificacionResponsable">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="existeResponsable" IsArray="FALSE" Name="existeResponsable">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="observaciones" IsArray="FALSE" Name="observaciones">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="lugaryfecha" IsArray="FALSE" Name="lugaryfecha">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="descripcionMaterial" IsArray="FALSE" Name="descripcionMaterial">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numeroSerie" IsArray="FALSE" Name="numeroSerie">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="macEthernet" IsArray="FALSE" Name="macEthernet">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="macWiFi" IsArray="FALSE" Name="macWiFi">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="correoCAU" IsArray="FALSE" Name="correoCAU">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="Interesado" Name="Interesado">
+                    <ParticipantType Type="ROLE"/>
+                    <Description>participant=$interesadoNIF</Description>
+                </Participant>
+                <Participant Id="Sistema" Name="Sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="UTSI_SOPORTE" Name="UTSI_SOPORTE">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerTiempoMedioFinalizacion" Name="obtenerTiempoMedioFinalizacion">
+                    <FormalParameters>
+                        <FormalParameter Id="tiempoMedioFinalizacion" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerUsuarioPropietario" Name="obtenerUsuarioPropietario">
+                    <FormalParameters>
+                        <FormalParameter Id="anagrama" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="clonaTipoAnexoToArchivo" Name="clonaTipoAnexoToArchivo">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="texto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="actualizaAmbito" Name="actualizaAmbito">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="ambito" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoEspecifico" Name="mandaCorreoEspecifico">
+                    <FormalParameters>
+                        <FormalParameter Id="destinatario" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveAsunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveCuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="leerConfiguracionPlataforma" Name="leerConfiguracionPlataforma">
+                    <FormalParameters>
+                        <FormalParameter Id="clasificacion" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="clave" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="correoCAU" Index="2" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="actualizaEtapaSituacion" Name="actualizaEtapaSituacion">
+                    <FormalParameters>
+                        <FormalParameter Id="codigoProcedimiento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="codigoSituacion" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoUsuariosRolConAnexo" Name="mandaCorreoUsuariosRolConAnexo">
+                    <FormalParameters>
+                        <FormalParameter Id="rolDestinatario" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveAsunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveCuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="documento" Index="3" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+            </Applications>
+            <Activities>
+                <Activity Id="idAUTOINICIO" Name="AUTOINICIO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>UTSI_SOPORTE</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="UTSI_SOPORTE"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="169,56"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="AUTOFIN" Name="AUTO FIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1023,8"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCumplimentarActa" Name="1.0 Cumplimentar Acta de retirada">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>UTSI_SOPORTE</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="UTSI_SOPORTE"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="278,55"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializar" Name="Inicializar">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>interesado</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"1"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>Sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="168,46"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionInteresado" Name="3.0 Notificacion Interesado">
+                    <Implementation>
+                        <SubFlow Execution="SYNCHR" Id="idNotificacion">
+                            <ActualParameters>
+                                <ActualParameter>$ultimo</ActualParameter>
+                                <ActualParameter>$metodoNotificacion</ActualParameter>
+                                <ActualParameter>"UTSI_ADM"</ActualParameter>
+                                <ActualParameter>"UTSI_ADM"</ActualParameter>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>$interesadoNombre</ActualParameter>
+                                <ActualParameter>$interesadoApellido1</ActualParameter>
+                                <ActualParameter>$interesadoApellido2</ActualParameter>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>$interesadoNombreCompleto</ActualParameter>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>"--"</ActualParameter>
+                                <ActualParameter>"08-03 Acta de retirada de material informatico.odt"</ActualParameter>
+                                <ActualParameter>fechaNotificacion</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </SubFlow>
+                    </Implementation>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="669,95"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionResponsable" Name="2.0 Notificacion responsable">
+                    <Implementation>
+                        <SubFlow Execution="SYNCHR" Id="idNotificacion">
+                            <ActualParameters>
+                                <ActualParameter>$ultimo</ActualParameter>
+                                <ActualParameter>$metodoNotificacion</ActualParameter>
+                                <ActualParameter>"UTSI_ADM"</ActualParameter>
+                                <ActualParameter>"UTSI_ADM"</ActualParameter>
+                                <ActualParameter>$usuarioNIF</ActualParameter>
+                                <ActualParameter>$usuarioNombre</ActualParameter>
+                                <ActualParameter>$usuarioApellido1</ActualParameter>
+                                <ActualParameter>$usuarioApellido2</ActualParameter>
+                                <ActualParameter>$mailUsuario</ActualParameter>
+                                <ActualParameter>$usuarioNombreCompleto</ActualParameter>
+                                <ActualParameter>$usuarioNIF</ActualParameter>
+                                <ActualParameter>"--"</ActualParameter>
+                                <ActualParameter>"08-03 Acta de retirada de material informatico.odt"</ActualParameter>
+                                <ActualParameter>fechaNotificacionResponsable</ActualParameter>
+                                <ActualParameter>estadoNotificacionResponsable</ActualParameter>
+                            </ActualParameters>
+                        </SubFlow>
+                    </Implementation>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="669,18"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificar" Name="Notificar¿">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra6"/>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra5"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="496,49"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="IdDIVIDIR" Name="DIVIDIR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="AND">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra8"/>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra7"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="496,98"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="IdUNIR" Name="UNIR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="AND"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="826,19"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRetiradaMaterialInformatico_act1">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra10"/>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra3"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="826,97"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRectificacionActa" Name="4.0 Rectificar Acta">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>UTSI_SOPORTE</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra14"/>
+                                    <TransitionRef Id="idRetiradaMaterialInformatico_tra13"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="UTSI_SOPORTE"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="827,53"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializar1" Name="Inicializar">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>interesado</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="leerConfiguracionPlataforma" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"correoCAU"</ActualParameter>
+                                <ActualParameter>correoCAU</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoEspecifico" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$correoCAU</ActualParameter>
+                                <ActualParameter>"CORREO.ASUNTO.CONFIRMACION"</ActualParameter>
+                                <ActualParameter>"CORREO.CUERPO.CONFIRMACION"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoUsuariosRolConAnexo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"UTSI_ADM"</ActualParameter>
+                                <ActualParameter>"CORREO.ASUNTO.CONFIRMACION"</ActualParameter>
+                                <ActualParameter>"CORREO.CUERPO.CONFIRMACION"</ActualParameter>
+                                <ActualParameter>"08-03 Acta de retirada de material informatico.odt"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"2"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>Sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="370,47"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="clonarAnexo" Name="Clonar Anexo">
+                    <Implementation>
+                        <Tool Id="clonaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"08-03 Acta de retirada de material informatico.odt"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaAmbito" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"08-03 Acta de retirada de material informatico.odt"</ActualParameter>
+                                <ActualParameter>"true"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"3"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>Sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="922,62"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="actualizaEtapaSituacion" Name="Actualiza Etapa Situacion">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"4"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>Sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1025,111"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="idAUTOINICIO" Id="idRetiradaMaterialInformatico_tra1" To="idInicializar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idInicializar" Id="idRetiradaMaterialInformatico_tra2" To="idCumplimentarActa">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="325,235"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificacionInteresado" Id="idRetiradaMaterialInformatico_tra4" To="idRetiradaMaterialInformatico_act1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificar" Id="idRetiradaMaterialInformatico_tra6" To="idNotificacionInteresado">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="698,241"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificar" Id="idRetiradaMaterialInformatico_tra5" To="IdDIVIDIR">
+                    <Condition Type="CONDITION">$existeResponsable="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="IdDIVIDIR" Id="idRetiradaMaterialInformatico_tra7" To="idNotificacionResponsable">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="536,46"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="IdDIVIDIR" Id="idRetiradaMaterialInformatico_tra8" To="idNotificacionInteresado">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificacionResponsable" Id="idRetiradaMaterialInformatico_tra11" To="IdUNIR">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="IdUNIR" Id="idRetiradaMaterialInformatico_tra12" To="clonarAnexo">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="967,45"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idCumplimentarActa" Id="idRetiradaMaterialInformatico_tra9" To="idInicializar1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="410,420"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRetiradaMaterialInformatico_act1" Id="idRetiradaMaterialInformatico_tra3" To="idRectificacionActa">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRetiradaMaterialInformatico_act1" Id="idRetiradaMaterialInformatico_tra10" To="IdUNIR">
+                    <Condition Type="CONDITION">$existeResponsable="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRectificacionActa" Id="idRetiradaMaterialInformatico_tra13" To="actualizaEtapaSituacion">
+                    <Condition Type="EXCEPTION">wait(15,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1064,428"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRectificacionActa" Id="idRetiradaMaterialInformatico_tra14" To="idNotificar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="535,414"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idInicializar1" Id="idRetiradaMaterialInformatico_tra17" To="idNotificar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="clonarAnexo" Id="idRetiradaMaterialInformatico_tra15" To="idRectificacionActa">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="969,405"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="actualizaEtapaSituacion" Id="idRetiradaMaterialInformatico_tra16" To="AUTOFIN">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=Sistema,CONNECTING_ACTIVITY_ID=AUTOFIN,X_OFFSET=1148,Y_OFFSET=19,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="EndOfWorkflow" Value="UTSI;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=UTSI_SOPORTE,CONNECTING_ACTIVITY_ID=idAUTOINICIO,X_OFFSET=96,Y_OFFSET=66,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="UTSI;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="Interesado;Sistema;UTSI_SOPORTE"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>

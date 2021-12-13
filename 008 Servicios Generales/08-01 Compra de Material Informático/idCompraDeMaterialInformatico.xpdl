@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:TiFlows="http://www.openbusinessengine.org/2003/TiFlows1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="idCompraDeMaterialInformatico" Name="08-01 Compra de Material Informatico" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2017-07-14T09:04:34+0200</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="RELEASED">
+        <Author>zsr</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <WorkflowProcesses>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="idCompraDeMaterialInformatico" Name="08-01 Compra de Material Informatico">
+            <ProcessHeader DurationUnit="m">
+                <Created>2017-07-14T09:10:19+0200</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>zsr</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="tipoDeLogado" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="codigoProcedimiento" IsArray="FALSE" Name="codigoProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>08-01</InitialValue>
+                </DataField>
+                <DataField Id="metadatoIdentificativoExpediente" IsArray="FALSE" Name="metadatoIdentificativoExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="nombreProcedimiento" IsArray="FALSE" Name="nombreProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interno_tiempoMedioFinalizacion" IsArray="FALSE" Name="interno_tiempoMedioFinalizacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoFormulario" IsArray="FALSE" Name="estadoFormulario">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoExpediente" IsArray="FALSE" Name="estadoExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>Habilitado</InitialValue>
+                </DataField>
+                <DataField Id="descripcionExpedienteCompra" IsArray="FALSE" Name="descripcionExpedienteCompra">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaCompra" IsArray="FALSE" Name="fechaCompra">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="UTSI_ADM" Name="UTSI_ADM">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+                <Participant Id="Sistema" Name="Sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="sistema" Name="sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="rolFicticio" Name="rolFicticio">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="crearExpedienteCompra" Name="crearExpedienteCompra"/>
+                <Application Id="invocacionSistemaExterno" Name="invocacionSistemaExterno">
+                    <FormalParameters>
+                        <FormalParameter Id="identificador" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoUsuariosRol" Name="mandaCorreoUsuariosRol">
+                    <FormalParameters>
+                        <FormalParameter Id="rol" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveAsunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveCuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerUsuarioPropietario" Name="obtenerUsuarioPropietario">
+                    <FormalParameters>
+                        <FormalParameter Id="anagrama" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerTiempoMedioFinalizacion" Name="obtenerTiempoMedioFinalizacion">
+                    <FormalParameters>
+                        <FormalParameter Id="tiempoMedioFinalizacion" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="permitirBusquedaExpediente" Name="permitirBusquedaExpediente">
+                    <FormalParameters>
+                        <FormalParameter Id="anagrama" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerNombreProcedimiento" Name="obtenerNombreProcedimiento">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreProcedimiento" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+            </Applications>
+            <Activities>
+                <Activity Id="idAUTOINICIO" Name="AUTOINICIO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>UTSI_ADM</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="UTSI_ADM"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="164,43"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFIN" Name="AUTO FIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolFicticio</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolFicticio"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="704,130"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAltaExpedienteCompra" Name="1.0 Alta Expediente Compra">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>UTSI_ADM</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="UTSI_ADM"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="274,41"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCrearExpediente" Name="Crear Expediente">
+                    <Implementation>
+                        <Tool Id="obtenerNombreProcedimiento" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>nombreProcedimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerTiempoMedioFinalizacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>interno_tiempoMedioFinalizacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Deshabilitado"</ActualParameter>
+                                <ActualParameter>estadoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"inicial"</ActualParameter>
+                                <ActualParameter>estadoFormulario</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="163,34"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idGestionExpediente" Name="2.0 Editar Expediente Compra">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>UTSI_ADM</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="UTSI_ADM"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="563,34"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTerminarExpediente" Name="Terminar Expediente">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolFicticio</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idCompraDeMaterialInformatico_tra16"/>
+                                    <TransitionRef Id="idCompraDeMaterialInformatico_tra17"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolFicticio"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="702,23"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicioEditar" Name="Inicio Editar">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"editar"</ActualParameter>
+                                <ActualParameter>estadoFormulario</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="411,32"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEstadoDeshabilitado" Name="Estado Deshabilitado">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"Deshabilitado"</ActualParameter>
+                                <ActualParameter>estadoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>Sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="409,48"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCompraDeMaterialInformatico_act1" Name="?es Terminado">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idCompraDeMaterialInformatico_tra3"/>
+                                    <TransitionRef Id="idCompraDeMaterialInformatico_tra5"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="UTSI_ADM"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="709,35"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="idAUTOINICIO" Id="idCompraDeMaterialInformatico_tra1" To="idCrearExpediente">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idCrearExpediente" Id="idCompraDeMaterialInformatico_tra7" To="idAltaExpedienteCompra">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="319,58"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAltaExpedienteCompra" Id="idCompraDeMaterialInformatico_tra8" To="idInicioEditar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="436,212"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idInicioEditar" Id="idCompraDeMaterialInformatico_tra14" To="idGestionExpediente">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="606,63"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTerminarExpediente" Id="idCompraDeMaterialInformatico_tra16" To="idEstadoDeshabilitado">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="451,507"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTerminarExpediente" Id="idCompraDeMaterialInformatico_tra17" To="idAUTOFIN">
+                    <Condition Type="EXCEPTION">wait(30,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idGestionExpediente" Id="idCompraDeMaterialInformatico_tra2" To="idCompraDeMaterialInformatico_act1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEstadoDeshabilitado" Id="idCompraDeMaterialInformatico_tra4" To="idInicioEditar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idCompraDeMaterialInformatico_act1" Id="idCompraDeMaterialInformatico_tra3" To="idTerminarExpediente">
+                    <Condition Type="CONDITION">$estadoExpediente="terminado"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="752,373"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idCompraDeMaterialInformatico_act1" Id="idCompraDeMaterialInformatico_tra5" To="idInicioEditar">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="747,50"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=rolFicticio,CONNECTING_ACTIVITY_ID=idAUTOFIN,X_OFFSET=809,Y_OFFSET=140,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="EndOfWorkflow" Value="Sistema;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=UTSI_ADM,CONNECTING_ACTIVITY_ID=idAUTOINICIO,X_OFFSET=88,Y_OFFSET=53,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="UTSI_ADM;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="sistema;UTSI_ADM;Sistema;rolFicticio"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>
