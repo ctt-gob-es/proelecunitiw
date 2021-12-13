@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (http://www.altova.com) by XMLSpy 2011 Professional Ed. Release 3, Installed for 20 users (with SMP from 2011-07-12 to 2013-07-12) (OFICINA DE COOPERACION UNIVERSITARIA) --><xs:schema targetNamespace="http://www.ocu.es/xsd/CursosFormacion" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ocu.es/xsd/CursosFormacion">
+	<!-- Operacion fuVersion -->
+	<xs:element name="fuVersionRequest"/>
+	<xs:element name="fuVersionResponse" type="tns:T_FU_VERSION"/>
+	<xs:complexType name="T_FU_VERSION">
+		<xs:sequence>
+			<xs:element name="FU_VERSION" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Operacion fuConsultaAlumPotenciales -->
+	<xs:element name="fuConsultaAlumPotencialesRequest" type="tns:T_CONSULTA_ALUM_POTENCIALES_REQUEST"/>
+	<xs:element name="fuConsultaAlumPotencialesResponse" type="tns:T_ALUMNOS"/>
+	<xs:complexType name="T_CONSULTA_ALUM_POTENCIALES_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_ID_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_ID_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_NUM_HORAS" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_ALUMNOS">
+		<xs:sequence>
+			<xs:element name="ALUMNO" type="tns:T2_ALUMNO" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:short" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_ALUMNO">
+		<xs:sequence>
+			<xs:element name="TIPO_DOCUMENTO" type="xs:string"/>
+			<xs:element name="DOCUMENTO" type="xs:string"/>
+			<xs:element name="NOMBRE" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:short" use="required"/>
+	</xs:complexType>
+	<!-- Operacion fuConsultaAsistentesInsc -->
+	<xs:element name="fuConsultaAsistentesInscRequest" type="tns:T_CONSULTA_ASISTENTES_INSC_REQUEST"/>
+	<xs:element name="fuConsultaAsistentesInscResponse" type="tns:T_ALUMNOS2"/>
+	<xs:complexType name="T_CONSULTA_ASISTENTES_INSC_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_ID_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_ID_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_NUM_HORAS" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_ALUMNOS2">
+		<xs:sequence>
+			<xs:element name="ALUMNO" type="tns:T2_ALUMNO2" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_ALUMNO2">
+		<xs:sequence>
+			<xs:element name="TIPO_DOCUMENTO" type="xs:string"/>
+			<xs:element name="DOCUMENTO" type="xs:string"/>
+			<xs:element name="NOMBRE" type="xs:string"/>
+			<xs:element name="ADMITIDO" type="xs:string"/>
+			<xs:element name="EXCLUIDO" type="xs:string"/>
+			<xs:element name="CAUSA" type="xs:string" minOccurs="0"/>
+			<xs:element name="LISTA_ESPERA" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<!-- Operacion fuConsultaCursoFormacion -->
+	<xs:element name="fuConsultaCursoFormacionRequest" type="tns:T_CONSULTA_CURSO_FORMACION_REQUEST"/>
+	<xs:element name="fuConsultaCursoFormacionResponse" type="tns:T_CURSOS"/>
+	<xs:complexType name="T_CONSULTA_CURSO_FORMACION_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_ID_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_F_INICIO" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_CURSOS">
+		<xs:sequence>
+			<xs:element name="CURSO" type="tns:T2_CURSO" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_CURSO">
+		<xs:sequence>
+			<xs:element name="ID_CURSO" type="xs:string"/>
+			<xs:element name="DES_CURSO" type="xs:string"/>
+			<xs:element name="F_DESDE_CURSO" type="xs:date"/>
+			<xs:element name="F_HASTA_CURSO" type="xs:date"/>
+			<xs:element name="DURACION" type="xs:int"/>
+			<xs:element name="GRUPO" type="tns:T3_GRUPO" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T3_GRUPO">
+		<xs:sequence>
+			<xs:element name="ID_GRUPO" type="xs:string"/>
+			<xs:element name="DES_GRUPO" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<!-- fuConsultaCursosInscrito -->
+	<xs:element name="fuConsultaCursosInscritoRequest" type="tns:T_CONSULTA_CURSOS_INSCRITO_REQUEST"/>
+	<xs:element name="fuConsultaCursosInscritoResponse" type="tns:T_CURSOS2"/>
+	<xs:complexType name="T_CONSULTA_CURSOS_INSCRITO_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_TIPO_DOC" type="xs:string"/>
+			<xs:element name="PV2_I_NIF" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_CURSOS2">
+		<xs:sequence>
+			<xs:element name="CURSO" type="tns:T2_CURSO2" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_CURSO2">
+		<xs:sequence>
+			<xs:element name="ID_CURSO" type="xs:string"/>
+			<xs:element name="DES_CURSO" type="xs:string"/>
+			<xs:element name="F_DESDE_CURSO" type="xs:string"/>
+			<xs:element name="F_HASTA_CURSO" type="xs:string"/>
+			<xs:element name="DURACION" type="xs:byte"/>
+			<xs:element name="ADMITIDO" type="xs:string"/>
+			<xs:element name="EXCLUIDO" type="xs:string"/>
+			<xs:element name="CAUSA" type="xs:string" minOccurs="0"/>
+			<xs:element name="LISTA_ESPERA" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+		<xs:attribute name="ID_PLAN" type="xs:string" use="required"/>
+		<xs:attribute name="FECHA_PLAN" type="xs:string" use="required"/>
+		<xs:attribute name="DES_PLAN" type="xs:string" use="required"/>
+	</xs:complexType>
+	<!-- fuConsultaCursosPersona -->
+	<xs:element name="fuConsultaCursosPersonaRequest" type="tns:T_CONSULTA_CURSOS_PERSONA_REQUEST"/>
+	<xs:element name="fuConsultaCursosPersonaResponse" type="tns:T_CURSOS3"/>
+	<xs:complexType name="T_CONSULTA_CURSOS_PERSONA_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_TIPO_DOC" type="xs:string"/>
+			<xs:element name="PV2_I_NIF" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_CURSOS3">
+		<xs:sequence>
+			<xs:element name="CURSO" type="tns:T2_CURSO3" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_CURSO3">
+		<xs:sequence>
+			<xs:element name="ID_CURSO" type="xs:string"/>
+			<xs:element name="DES_CURSO" type="xs:string"/>
+			<xs:element name="F_DESDE_CURSO" type="xs:date" nillable="true" minOccurs="0"/>
+			<xs:element name="F_HASTA_CURSO" type="xs:date" nillable="true" minOccurs="0"/>
+			<xs:element name="ID_PLAN" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_PLAN" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="APROVECHAMIENTO" type="xs:string"/>
+			<xs:element name="ASISTENCIA" type="xs:string"/>
+			<xs:element name="NUM_HORAS" type="xs:decimal"/>
+			<xs:element name="OFICIAL_SN" type="xs:string"/>
+			<xs:element name="ORGANISMO">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="ID" type="xs:string"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T3_F_DESDE_CURSO"/>
+	<!-- fuConsultaCursosPotenciales -->
+	<xs:element name="fuConsultaCursosPotencialesRequest" type="tns:T_CONSULTA_CURSOS_POTENCIALES_REQUEST"/>
+	<xs:element name="fuConsultaCursosPotencialesResponse" type="tns:T_CURSOS4"/>
+	<xs:complexType name="T_CONSULTA_CURSOS_POTENCIALES_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_TIPO_DOC" type="xs:string"/>
+			<xs:element name="PV2_I_NIF" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_CURSOS4">
+		<xs:sequence>
+			<xs:element name="CURSO" type="tns:T2_CURSO4" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_CURSO4">
+		<xs:sequence>
+			<xs:element name="ID_CURSO" type="xs:string"/>
+			<xs:element name="DES_CURSO" type="xs:string"/>
+			<xs:element name="F_DESDE_CURSO" type="xs:date"/>
+			<xs:element name="F_HASTA_CURSO" type="xs:date"/>
+			<xs:element name="DURACION" type="xs:string"/>
+			<xs:element name="GRUPO" type="tns:T3_GRUPO4" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+		<xs:attribute name="ID_PLAN" type="xs:string" use="required"/>
+		<xs:attribute name="FECHA_DESDE_PLAN" type="xs:date" use="required"/>
+		<xs:attribute name="DES_PLAN" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T3_GRUPO4">
+		<xs:sequence>
+			<xs:element name="ID_GRUPO" type="xs:string"/>
+			<xs:element name="DES_GRUPO" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<!-- fuConsultaPlanesFormacion -->
+	<xs:element name="fuConsultaPlanesFormacionRequest" type="tns:T_CONSULTA_PLANES_FORMACION_REQUEST"/>
+	<xs:element name="fuConsultaPlanesFormacionResponse" type="tns:T_PLANES"/>
+	<xs:complexType name="T_CONSULTA_PLANES_FORMACION_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_F_INICIO" type="xs:string"/>
+			<xs:element name="PV2_I_F_FIN" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_PLANES">
+		<xs:sequence>
+			<xs:element name="PLAN" type="tns:T2_PLAN" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_PLAN">
+		<xs:sequence>
+			<xs:element name="ID_PLAN_FORMACION" type="xs:string"/>
+			<xs:element name="DES_PLAN_FORMACION" type="xs:string"/>
+			<xs:element name="F_DESDE_PLAN" type="xs:date"/>
+			<xs:element name="F_HASTA_PLAN" type="xs:date"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<!-- fuInsertaAlumnoEnCurso -->
+	<xs:element name="fuInsertaAlumnoEnCursoRequest" type="tns:T_INSERTA_ALUMNO_EN_CURSO_REQUEST"/>
+	<xs:element name="fuInsertaAlumnoEnCursoResponse" type="tns:T_RESULTADOS"/>
+	<xs:complexType name="T_INSERTA_ALUMNO_EN_CURSO_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_TIPO_DOC" type="xs:string"/>
+			<xs:element name="PV2_I_DOCUMENTO" type="xs:string"/>
+			<xs:element name="PV2_I_ID_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_ID_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_NUM_HORAS" type="xs:string"/>
+			<xs:element name="PV2_I_ID_GRUPO" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_RESULTADOS">
+		<xs:sequence>
+			<xs:element name="RESULTADO" type="tns:T2_RESULTADO"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_RESULTADO">
+		<xs:sequence>
+			<xs:element name="CODIGO" type="xs:byte"/>
+			<xs:element name="DESCRIPCION" type="xs:string"/>
+			<xs:element name="ACCION" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="TIPO" type="xs:string" use="required"/>
+	</xs:complexType>
+	<!-- fuListadoCursos -->
+	<xs:element name="fuListadoCursosRequest" type="tns:T_LISTADO_CURSOS_REQUEST"/>
+	<xs:element name="fuListadoCursosResponse" type="tns:T_CURSOS5"/>
+	<xs:complexType name="T_LISTADO_CURSOS_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_CURSOS5">
+		<xs:sequence>
+			<xs:element name="CURSO" type="tns:T2_CURSO5" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="PLAN_VIGENTE" type="xs:string" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_CURSO5">
+		<xs:sequence>
+			<xs:element name="NOMBRE" type="xs:string"/>
+			<xs:element name="F_FIN_PLAZO" type="xs:date"/>
+			<xs:element name="F_INICIO" type="xs:date"/>
+			<xs:element name="F_FIN" type="xs:date"/>
+			<xs:element name="NUM_HORAS" type="xs:byte"/>
+			<xs:element name="GRUPOS" type="tns:T3_GRUPOS"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+		<xs:attribute name="ID_CURSO" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T3_GRUPOS" mixed="true">
+		<xs:sequence>
+			<xs:element name="GRUPO" type="tns:T4_GRUPO" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T4_GRUPO">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="NUM" type="xs:byte" use="required"/>
+				<xs:attribute name="ID" type="xs:string" use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- fuSolicitaCurso -->
+	<xs:element name="fuSolicitaCursoRequest" type="tns:T_SOLICITA_CURSO_REQUEST"/>
+	<xs:element name="fuSolicitaCursoResponse" type="tns:T_RESULTADOS_SC"/>
+	<xs:complexType name="T_SOLICITA_CURSO_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_TIPO_DOC" type="xs:string"/>
+			<xs:element name="PV2_I_NIF" type="xs:string"/>
+			<xs:element name="CURSOS_SELECCIONADOS" type="tns:T_CURSOS_SELECCIONADOS"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_CURSOS_SELECCIONADOS">
+		<xs:sequence>
+			<xs:element name="CURSO_SELECCIONADO" type="tns:T2_CURSO_SELECCIONADO" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_CURSO_SELECCIONADO">
+		<xs:sequence>
+			<xs:element name="ID_CURSO" type="xs:string"/>
+			<xs:element name="F_DESDE_CURSO" type="xs:string"/>
+			<xs:element name="ORDEN" type="xs:string"/>
+			<xs:element name="ID_GRUPO" type="xs:string"/>
+			<xs:element name="NUM_HORAS" type="xs:int"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" type="xs:byte" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T_RESULTADOS_SC">
+		<xs:sequence>
+			<xs:element name="RESULTADO" type="tns:T2_RESULTADO_SC"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" type="xs:byte" use="required"/>
+		<xs:attribute name="LANG" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T2_RESULTADO_SC">
+		<xs:sequence>
+			<xs:element name="CODIGO" type="xs:byte"/>
+			<xs:element name="DESCRIPCION" type="xs:string"/>
+			<xs:element name="ACCION" type="xs:string"/>
+		</xs:sequence>
+		<xs:attribute name="TIPO" type="xs:string" use="required"/>
+	</xs:complexType>	
+	<!-- fuFichaCurso -->
+	<xs:element name="fuFichaCursoRequest" type="tns:T_FICHA_REQUEST"/>
+	<xs:element name="fuFichaCursoResponse" type="tns:T_FICHA_RESPONSE"/>
+	<xs:complexType name="T_FICHA_REQUEST">
+		<xs:sequence>
+			<xs:element name="PV2_I_ID_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_PLAN" type="xs:string"/>
+			<xs:element name="PV2_I_ID_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_F_DESDE_CURSO" type="xs:string"/>
+			<xs:element name="PV2_I_NUM_HORAS" type="xs:string"/>
+			<xs:element name="PV2_I_ID_EDICION" type="xs:string"/>
+			<xs:element name="PV2_I_LANGISO" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="T_FICHA_RESPONSE">
+		<xs:sequence>
+			<xs:element name="FICHA" type="tns:T2_FICHA" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TOTAL" use="required" type="xs:byte"/>
+		<xs:attribute name="LANG" use="required" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="T2_FICHA">
+		<xs:sequence>
+			<xs:element name="FECHA_FICHA" type="xs:string"/>
+			<xs:element name="ID_EDICION" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_EDICION" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DESTINATARIOS" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="NUM_HORAS" type="xs:decimal" nillable="true" minOccurs="0"/>
+			<xs:element name="NUM_PLAZAS" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="F_CONTENIDO" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_CONTENIDO" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="FECHAS_Y_LUGARES" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="FORMADORES" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="OBJETIVOS" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="REQUISITOS" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="OTRAS_CARACT" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="ID_ETIQUETA1" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_ETIQUETA1" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="ID_ETIQUETA2" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_ETIQUETA2" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="ID_ETIQUETA3" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_ETIQUETA3" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="ID_ETIQUETA4" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_ETIQUETA4" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="ID_ETIQUETA5" type="xs:string" nillable="true" minOccurs="0"/>
+			<xs:element name="DES_ETIQUETA5" type="xs:string" nillable="true" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="NUM" use="required" type="xs:byte"/>
+	</xs:complexType>
+</xs:schema>

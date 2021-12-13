@@ -1,0 +1,51 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://uxxirrhh.ocu.es/ws/DatosAdministrativosPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dat:datosAdministrativosPIRequest lang="?">
+         <!--Optional:-->
+         <dat:tipoDocumento>NIF</dat:tipoDocumento>
+         <!--Optional:-->
+         <dat:numeroDocumento>0000000T</dat:numeroDocumento>
+         <dat:faceta>I</dat:faceta>
+         <dat:fechaConsulta>2020-02-02</dat:fechaConsulta>
+      </dat:datosAdministrativosPIRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header xmlns:dat="http://uxxirrhh.ocu.es/ws/DatosAdministrativosPI"/>
+   <soapenv:Body xmlns:dat="http://uxxirrhh.ocu.es/ws/DatosAdministrativosPI">
+      <tns:datosAdministrativosPIResponse xmlns:tns="http://uxxirrhh.ocu.es/ws/DatosAdministrativosPI">
+         <tns:tipoContrato>Incorporación de Investigadores</tns:tipoContrato>
+         <tns:cuentaCotizacion>LABORALES FIJOS Y EVENTUALES</tns:cuentaCotizacion>
+         <tns:puestos>
+            <tns:puesto>
+               <tns:id>IN003900</tns:id>
+               <tns:descripcion>LABORAL INVESTIGACION (DR. RAMON Y CAJAL)</tns:descripcion>
+               <tns:fechaTomaPosesion>2017-04-11</tns:fechaTomaPosesion>
+               <tns:categoria id="RYC_I">Ramón y Cajal</tns:categoria>
+               <tns:grupo/>
+               <tns:regimenJuridico id="I">Investigación</tns:regimenJuridico>
+               <tns:tipoRegimenJuridico id="ILI">Laboral Investigador</tns:tipoRegimenJuridico>
+               <tns:convenio id="SC">SIN CONVENIO (con paga Extraordinaria)</tns:convenio>
+               <tns:situacionAdministrativa id="AC">Activo</tns:situacionAdministrativa>
+               <tns:proyecto>
+                  <tns:id>2000/00025/001</tns:id>
+                  <tns:descripcion>SUBPROGRAMA RAMON Y CAJAL</tns:descripcion>
+                  <tns:fechaDesde>2000-01-01</tns:fechaDesde>
+                  <tns:fechaHasta>3000-01-01</tns:fechaHasta>
+                  <tns:importe>0</tns:importe>
+                  <tns:medida/>
+               </tns:proyecto>
+            </tns:puesto>
+         </tns:puestos>
+         <tns:ubicacion>
+            <tns:deptUnidad id="M055">QUÍMICA ORGÁNICA</tns:deptUnidad>
+            <tns:seccSubun id="M0550M01">FACULTAD DE CIENCIAS</tns:seccSubun>
+            <tns:centro id="0M01">FACULTAD DE CIENCIAS</tns:centro>
+         </tns:ubicacion>
+      </tns:datosAdministrativosPIResponse>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+ 

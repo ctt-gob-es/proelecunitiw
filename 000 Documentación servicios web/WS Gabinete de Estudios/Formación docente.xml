@@ -1,0 +1,24 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:impl="http://impl.webservice.formacionprofesorado.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <impl:getListaCursos>
+         <impl:correoElectronicoInstitucional>nombre.apellido@uam.es</impl:correoElectronicoInstitucional>
+      </impl:getListaCursos>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://webservice.formacionprofesorado.com" xmlns:ns2="http://impl.webservice.formacionprofesorado.com">
+   <SOAP-ENV:Body>
+      <ns2:getListaCursosResponse>
+         <ns2:getListaCursosReturn>
+            <ns1:codigoCurso>699</ns1:codigoCurso>
+            <ns1:descripcion>2013/2014-699-Trabajo en grupo a través de Moodle</ns1:descripcion>
+         </ns2:getListaCursosReturn>
+         <ns2:getListaCursosReturn>
+            <ns1:codigoCurso>382</ns1:codigoCurso>
+            <ns1:descripcion>2011/2012-382-Mapas conceptuales</ns1:descripcion>
+         </ns2:getListaCursosReturn>
+      </ns2:getListaCursosResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

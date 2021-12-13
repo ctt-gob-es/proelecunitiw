@@ -1,0 +1,46 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dat="http://www.ocu.es/xsd/DatosPersonales">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dat:fuConsultaDatosPersonalesRequest>
+         <dat:PV2_I_TIPO_DOC>NIF</dat:PV2_I_TIPO_DOC>
+         <dat:PV2_I_NIF>51452189Q</dat:PV2_I_NIF>
+         <dat:PV2_I_LANGISO>ESP</dat:PV2_I_LANGISO>
+      </dat:fuConsultaDatosPersonalesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap-env:Body xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/">
+      <dat:fuConsultaDatosPersonalesResponse TOTAL="1" LANG="ESP" xmlns:dat="http://www.ocu.es/xsd/DatosPersonales">
+         <dat:PERSONALES>
+            <dat:DOCUMENTO TIPO="NIF">00000000T</dat:DOCUMENTO>
+            <dat:NOMBRE>NOMBRE</dat:NOMBRE>
+            <dat:APELLIDO1>APELLIDO1</dat:APELLIDO1>
+            <dat:APELLIDO2>APELLIDO2</dat:APELLIDO2>
+            <dat:ESTADO ID="S">Soltero</dat:ESTADO>
+            <dat:SEXO ID="M">Mujer</dat:SEXO>
+            <dat:NACIONALIDAD ID="724">ESPAÑA</dat:NACIONALIDAD>
+         </dat:PERSONALES>
+         <dat:NACIMIENTO>
+            <dat:FECHA>1975-03-21</dat:FECHA>
+            <dat:PAIS ID="724">Spain</dat:PAIS>
+            <dat:PROVINCIA ID="28">MADRID</dat:PROVINCIA>
+            <dat:MUNICIPIO ID="28001">MADRID</dat:MUNICIPIO>
+         </dat:NACIMIENTO>
+         <dat:RESIDENCIA>
+            <dat:TIPO_VIA ID="CL">CALLE</dat:TIPO_VIA>
+            <dat:DOMICILIO>DOMICILIO, 4 1A</dat:DOMICILIO>
+            <dat:PAIS ID="724">Spain</dat:PAIS>
+            <dat:PROVINCIA ID="28">MADRID</dat:PROVINCIA>
+            <dat:MUNICIPIO ID="28001">MADRID</dat:MUNICIPIO>
+            <dat:CP>28888</dat:CP>
+         </dat:RESIDENCIA>
+         <dat:OTROS>
+            <dat:CORREO_ELECTRONICO>nombre.apellido@uam.es</dat:CORREO_ELECTRONICO>
+            <dat:TELEFONO/>
+            <dat:CORREO_ELECTRONICO2>nombre.apellido@gmail.com</dat:CORREO_ELECTRONICO2>
+            <dat:MOVIL>999999999</dat:MOVIL>
+         </dat:OTROS>
+      </dat:fuConsultaDatosPersonalesResponse>
+   </soap-env:Body>
+</soapenv:Envelope>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="CursosFormacion" targetNamespace="http://www.ocu.es/wsdl/CursosFormacion/" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://www.ocu.es/xsd/CursosFormacion" xmlns:WL5G3N2="http://www.ocu.es/wsdl/CursosFormacion/" xmlns:WL5G3N3="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.ocu.es/wsdl/CursosFormacion/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.ocu.es/xsd/CursosFormacion">
+      <xsd:import namespace="http://www.ocu.es/xsd/CursosFormacion" schemaLocation="https://osb-pruebas.uam.es:443/uxxi-rrhh/formacion/PServices/CursosFormacion?SCHEMA%2Fuxxi-rrhh%2Fformacion%2FXML%2FXSD%2FCursosFormacion"/>
+    </xsd:schema>
+    <xsd:schema targetNamespace="http://www.ocu.es/wsdl/CursosFormacion/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.ocu.es/wsdl/CursosFormacion/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.ocu.es/xsd/CursosFormacion">
+      <xsd:element name="fuFichaCurso">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="fuFichaCursoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="fuConsultaAlumPotencialesRequest">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaAlumPotencialesRequest" name="fuConsultaAlumPotencialesRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaAlumPotencialesResponse">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaAlumPotencialesResponse" name="fuConsultaAlumPotencialesResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaAsistentesInscRequest">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaAsistentesInscRequest" name="fuConsultaAsistentesInscRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaAsistentesInscResponse">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaAsistentesInscResponse" name="fuConsultaAsistentesInscResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursoFormacionRequest">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursoFormacionRequest" name="fuConsultaCursoFormacionRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursoFormacionResponse">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursoFormacionResponse" name="fuConsultaCursoFormacionResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursosInscritoRequest">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursosInscritoRequest" name="fuConsultaCursosInscritoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursosInscritoResponse">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursosInscritoResponse" name="fuConsultaCursosInscritoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursosPersonaRequest">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursosPersonaRequest" name="fuConsultaCursosPersonaRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursosPersonaResponse">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursosPersonaResponse" name="fuConsultaCursosPersonaResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursosPotencialesRequest">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursosPotencialesRequest" name="fuConsultaCursosPotencialesRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaCursosPotencialesResponse">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaCursosPotencialesResponse" name="fuConsultaCursosPotencialesResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaPlanesFormacionRequest">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaPlanesFormacionRequest" name="fuConsultaPlanesFormacionRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuConsultaPlanesFormacionResponse">
+    <WL5G3N0:part element="WL5G3N1:fuConsultaPlanesFormacionResponse" name="fuConsultaPlanesFormacionResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuInsertaAlumnoEnCursoRequest">
+    <WL5G3N0:part element="WL5G3N1:fuInsertaAlumnoEnCursoRequest" name="fuInsertaAlumnoEnCursoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuInsertaAlumnoEnCursoResponse">
+    <WL5G3N0:part element="WL5G3N1:fuInsertaAlumnoEnCursoResponse" name="fuInsertaAlumnoEnCursoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuListadoCursosRequest">
+    <WL5G3N0:part element="WL5G3N1:fuListadoCursosRequest" name="fuListadoCursosRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuListadoCursosResponse">
+    <WL5G3N0:part element="WL5G3N1:fuListadoCursosResponse" name="fuListadoCursosResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuSolicitaCursoRequest">
+    <WL5G3N0:part element="WL5G3N1:fuSolicitaCursoRequest" name="fuSolicitaCursoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuSolicitaCursoResponse">
+    <WL5G3N0:part element="WL5G3N1:fuSolicitaCursoResponse" name="fuSolicitaCursoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuVersionRequest">
+    <WL5G3N0:part element="WL5G3N1:fuVersionRequest" name="fuVersionRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuVersionResponse">
+    <WL5G3N0:part element="WL5G3N1:fuVersionResponse" name="fuVersionResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuFichaCursoRequest">
+    <WL5G3N0:part element="WL5G3N1:fuFichaCursoRequest" name="fuFichaCursoRequest"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="fuFichaCursoResponse">
+    <WL5G3N0:part element="WL5G3N1:fuFichaCursoResponse" name="fuFichaCursoResponse"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="CursosFormacion">
+    <WL5G3N0:operation name="fuConsultaAlumPotenciales">
+      <WL5G3N0:input message="WL5G3N2:fuConsultaAlumPotencialesRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuConsultaAlumPotencialesResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaAsistentesInsc">
+      <WL5G3N0:input message="WL5G3N2:fuConsultaAsistentesInscRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuConsultaAsistentesInscResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursoFormacion">
+      <WL5G3N0:input message="WL5G3N2:fuConsultaCursoFormacionRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuConsultaCursoFormacionResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursosInscrito">
+      <WL5G3N0:input message="WL5G3N2:fuConsultaCursosInscritoRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuConsultaCursosInscritoResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursosPersona">
+      <WL5G3N0:input message="WL5G3N2:fuConsultaCursosPersonaRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuConsultaCursosPersonaResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursosPotenciales">
+      <WL5G3N0:input message="WL5G3N2:fuConsultaCursosPotencialesRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuConsultaCursosPotencialesResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaPlanesFormacion">
+      <WL5G3N0:input message="WL5G3N2:fuConsultaPlanesFormacionRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuConsultaPlanesFormacionResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuInsertaAlumnoEnCurso">
+      <WL5G3N0:input message="WL5G3N2:fuInsertaAlumnoEnCursoRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuInsertaAlumnoEnCursoResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuListadoCursos">
+      <WL5G3N0:input message="WL5G3N2:fuListadoCursosRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuListadoCursosResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuSolicitaCurso">
+      <WL5G3N0:input message="WL5G3N2:fuSolicitaCursoRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuSolicitaCursoResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuVersion">
+      <WL5G3N0:input message="WL5G3N2:fuVersionRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuVersionResponse"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuFichaCurso">
+      <WL5G3N0:input message="WL5G3N2:fuFichaCursoRequest"/>
+      <WL5G3N0:output message="WL5G3N2:fuFichaCursoResponse"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="CursosFormacionSOAP" type="WL5G3N2:CursosFormacion">
+    <WL5G3N3:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="fuConsultaAlumPotenciales">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuConsultaAlumPotenciales"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaAsistentesInsc">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuConsultaAsistentesInsc"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursoFormacion">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuConsultaCursoFormacion"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursosInscrito">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuConsultaCursosInscrito"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursosPersona">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuConsultaCursosPersona"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaCursosPotenciales">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuConsultaCursosPotenciales"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuConsultaPlanesFormacion">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuConsultaPlanesFormacion"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuInsertaAlumnoEnCurso">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuInsertaAlumnoEnCurso"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuListadoCursos">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuListadoCursos"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuSolicitaCurso">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuSolicitaCurso"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuVersion">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuVersion"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="fuFichaCurso">
+      <WL5G3N3:operation soapAction="http://www.ocu.es/CursosFormacion/fuFichaCurso"/>
+      <WL5G3N0:input>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N3:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="CursosFormacion">
+    <WL5G3N0:port binding="WL5G3N2:CursosFormacionSOAP" name="CursosFormacionSOAP">
+      <WL5G3N3:address location="http://osb-pruebas.uam.es/uxxi-rrhh/formacion/PServices/CursosFormacion"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>
