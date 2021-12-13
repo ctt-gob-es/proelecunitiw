@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TiFlows="http://www.openbusinessengine.org/2003/TiFlows1.0" Id="idCertificadoCursoUAM" Name="02-16 Certificado Curso UAM" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 xpdl-1.0.xsd">
+    <PackageHeader xmlns="">
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2018-03-09T09:08:03+0100</Created>
+    </PackageHeader>
+    <RedefinableHeader xmlns="" PublicationStatus="RELEASED">
+        <Author>ibv</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <ConformanceClass xmlns="" GraphConformance="NON_BLOCKED"/>
+    <ExternalPackages xmlns="">
+        <ExternalPackage href="idNotificacion">
+            <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                <ExtendedAttribute xmlns="" Name="EXTERNAL_PACKAGE_ID" Value="idNotificacion"></ExtendedAttribute>
+            </ExtendedAttributes>
+        </ExternalPackage>
+    </ExternalPackages>
+    <WorkflowProcesses xmlns="">
+        <WorkflowProcess Id="idCertificadoCursoUAM" Name="02-16 Certificado Curso UAM" AccessLevel="PUBLIC">
+            <ProcessHeader DurationUnit="m">
+                <Created>2018-03-09T09:08:03+0100</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>ibv</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="tipoDeLogado" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="interno_tiempoMedioFinalizacion" Name="interno_tiempoMedioFinalizacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesado" Name="interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tipoEmpleado" Name="tipoEmpleado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="faceta" Name="faceta">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="facetaPrincipal" Name="facetaPrincipal">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tipoDocumento" Name="tipoDocumento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNIF" Name="interesadoNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombre" Name="interesadoNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoApellido1" Name="interesadoApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoApellido2" Name="interesadoApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombreCompleto" Name="interesadoNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNIF" Name="destinatarioNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombre" Name="destinatarioNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido1" Name="destinatarioApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido2" Name="destinatarioApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombreCompleto" Name="destinatarioNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="mailAvisos" Name="mailAvisos">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numeroMovil" Name="numeroMovil">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="metodoNotificacion" Name="metodoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="domicilioCompletoNotificaciones" Name="domicilioCompletoNotificaciones">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="codigoProcedimiento" Name="codigoProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>02-16</InitialValue>
+                </DataField>
+                <DataField Id="metadatoIdentificativoExpediente" Name="metadatoIdentificativoExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoProcedimiento" Name="estadoProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>Iniciado</InitialValue>
+                </DataField>
+                <DataField Id="registro_IdInteresado" Name="registro_IdInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NifInteresado" Name="registro_NifInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NombreInteresado" Name="registro_NombreInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Apellido1Interesado" Name="registro_Apellido1Interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Apellido2Interesado" Name="registro_Apellido2Interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_IdDomicilio" Name="registro_IdDomicilio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NombreDomicilio" Name="registro_NombreDomicilio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_OficinaRegistro" Name="registro_OficinaRegistro">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Destino" Name="registro_Destino">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_TipoTransporte" Name="registro_TipoTransporte">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Resumen" Name="registro_Resumen">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Origen" Name="registro_Origen">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_refExpediente" Name="registro_refExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_numeroEntrada" Name="registro_numeroEntrada">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_fechaEntrada" Name="registro_fechaEntrada">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_numeroSalida" Name="registro_numeroSalida">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_fechaSalida" Name="registro_fechaSalida">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaNotificacion" Name="fechaNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacion" Name="estadoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="selloFirmante" Name="selloFirmante">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="documentacionAportada" Name="documentacionAportada">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>0</InitialValue>
+                </DataField>
+                <DataField Id="codigoCurso" Name="codigoCurso">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="descripcionCurso" Name="descripcionCurso">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaDesde" Name="fechaDesde">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaHasta" Name="fechaHasta">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numHoras" Name="numHoras">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tipoCertificado" Name="tipoCertificado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="resolucion" Name="resolucion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="ciudadanoCertificado" Name="ciudadanoCertificado">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+                <Participant Id="Interesado" Name="Interesado">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$interesado</Description>
+                </Participant>
+                <Participant Id="sistema" Name="sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerUsuarioPropietario" Name="obtenerUsuarioPropietario">
+                    <FormalParameters>
+                        <FormalParameter Id="anagrama" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerTiempoMedioFinalizacion" Name="obtenerTiempoMedioFinalizacion">
+                    <FormalParameters>
+                        <FormalParameter Id="tiempoMedioFinalizacion" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="permitirBusquedaExpediente" Name="permitirBusquedaExpediente">
+                    <FormalParameters>
+                        <FormalParameter Id="anagrama" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="getAliasFirmaByCodigoTP" Name="getAliasFirmaByCodigoTP">
+                    <FormalParameters>
+                        <FormalParameter Id="codigoTP" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="alias" Index="1" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="invocacionSistemaExterno" Name="invocacionSistemaExterno">
+                    <FormalParameters>
+                        <FormalParameter Id="identificador" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoUsuariosRol" Name="mandaCorreoUsuariosRol">
+                    <FormalParameters>
+                        <FormalParameter Id="rol" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveAsunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveCuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoHtmlConAnexo" Name="mandaCorreoHtmlConAnexo">
+                    <FormalParameters>
+                        <FormalParameter Id="para" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="asunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="cuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="documento" Index="3" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="rellenaCamposOdt" Name="rellenaCamposOdt">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDoc" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="nombreMatriz" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="anexoAdicional" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="esPDF" Index="3" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="firmaServidor" Name="firmaServidor">
+                    <FormalParameters>
+                        <FormalParameter Id="clasificacion" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="documento" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerCursosUAM" Name="obtenerCursosUAM"/>
+            </Applications>
+            <Activities>
+                <Activity Id="AUTOINICIOCIUDADANO" Name="AUTOINICIOCIUDADANO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>ciudadanoCertificado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="ciudadanoCertificado"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="139,44"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializar" Name="Inicializar">
+                    <Implementation>
+                        <Tool Id="obtenerUsuarioPropietario" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>interesado</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerTiempoMedioFinalizacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>interno_tiempoMedioFinalizacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesado</ActualParameter>
+                                <ActualParameter>interesadoNIF</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesado</ActualParameter>
+                                <ActualParameter>metadatoIdentificativoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$tipoDocumento</ActualParameter>
+                                <ActualParameter>tipoDocumento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="139,48"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idObtenerDatosEmpleado" Name="Obtener Datos Empleado">
+                    <Implementation>
+                        <Tool Id="invocacionSistemaExterno" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"obtenerDatosPersonalesEmpleado"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="invocacionSistemaExterno" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"comprobarFacetasInicio"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerCursosUAM" Type="APPLICATION"/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="266,48"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCumplimentarSolicitudInteresado" Name="1.0. Cumplimentar Solicitud Interesado">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idCertificadoCursoUAM_tra4"/>
+                                    <TransitionRef Id="idCertificadoCursoUAM_tra6"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="266,68"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idGenerarCertificadoFormacionUAM" Name="Generar Certificado Formacion UAM">
+                    <Implementation>
+                        <Tool Id="permitirBusquedaExpediente" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"RRHH_PAS_REFUHA_ADM"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="rellenaCamposOdt" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$resolucion</ActualParameter>
+                                <ActualParameter>"02-16 Certificado Curso Formacion UAM.pdf"</ActualParameter>
+                                <ActualParameter>"true"</ActualParameter>
+                                <ActualParameter>"true"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="firmaServidor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"02-16 Certificado Curso Formacion UAM.pdf"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoHtmlConAnexo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>"MAIL.ENVIOCERTIFICADO.ASUNTO"</ActualParameter>
+                                <ActualParameter>"MAIL.ENVIOCERTIFICADO.CUERPO"</ActualParameter>
+                                <ActualParameter>"02-16 Certificado Curso Formacion UAM.pdf"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="389,50"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionCertificado" Name="3.0 Notificar Certificado">
+                    <Implementation>
+                        <SubFlow Id="idNotificacion" Execution="SYNCHR">
+                            <ActualParameters>
+                                <ActualParameter>$ultimo</ActualParameter>
+                                <ActualParameter>$metodoNotificacion</ActualParameter>
+                                <ActualParameter>"RRHH_PAS_REFUHA_ADM"</ActualParameter>
+                                <ActualParameter>"RRHH_PAS_REFUHA_ADM"</ActualParameter>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>$interesadoNombre</ActualParameter>
+                                <ActualParameter>$interesadoApellido1</ActualParameter>
+                                <ActualParameter>$interesadoApellido2</ActualParameter>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>$interesadoNombreCompleto</ActualParameter>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>"--"</ActualParameter>
+                                <ActualParameter>"02-16 Certificado Curso Formacion UAM.pdf"</ActualParameter>
+                                <ActualParameter>fechaNotificacion</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </SubFlow>
+                    </Implementation>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="528,52"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFIN" Name="AUTO FIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="654,52"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition Id="idCertificadoCursoUAM_tra1" From="AUTOINICIOCIUDADANO" To="idInicializar">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idCertificadoCursoUAM_tra2" From="idInicializar" To="idObtenerDatosEmpleado">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idCertificadoCursoUAM_tra3" From="idObtenerDatosEmpleado" To="idCumplimentarSolicitudInteresado">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idCertificadoCursoUAM_tra6" From="idCumplimentarSolicitudInteresado" To="idAUTOFIN">
+                    <Condition Type="EXCEPTION">wait(7,days)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="694,406"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idCertificadoCursoUAM_tra7" From="idNotificacionCertificado" To="idAUTOFIN">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idCertificadoCursoUAM_tra4" From="idCumplimentarSolicitudInteresado" To="idGenerarCertificadoFormacionUAM">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="429,390"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idCertificadoCursoUAM_tra5" From="idGenerarCertificadoFormacionUAM" To="idNotificacionCertificado">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=ciudadanoCertificado,CONNECTING_ACTIVITY_ID=AUTOINICIOCIUDADANO,X_OFFSET=67,Y_OFFSET=55,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idAUTOFIN,X_OFFSET=771,Y_OFFSET=63,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="EndOfWorkflow" Value="Interesado;"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="ciudadanoCertificado;sistema;Interesado"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="StartOfWorkflow" Value="ciudadanoCertificado;"></ExtendedAttribute>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>

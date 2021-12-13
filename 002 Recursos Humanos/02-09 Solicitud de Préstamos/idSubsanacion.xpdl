@@ -1,0 +1,1649 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:TiFlows="http://www.openbusinessengine.org/2003/TiFlows1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Id="idSubsanacion" Name="003-001 Subsanacion" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 http://wfmc.org/standards/docs/TC-1025_schema_10_xpdl.xsd">
+    <PackageHeader>
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2012-08-29T11:34:45+0200</Created>
+    </PackageHeader>
+    <RedefinableHeader PublicationStatus="RELEASED">
+        <Author>mmhc</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <ConformanceClass GraphConformance="NON_BLOCKED"/>
+    <ExternalPackages>
+        <ExternalPackage href="idNotificacion.xpdl">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="EXTERNAL_PACKAGE_ID" Value="idNotificacion"/>
+            </ExtendedAttributes>
+        </ExternalPackage>
+    </ExternalPackages>
+    <WorkflowProcesses>
+        <WorkflowProcess AccessLevel="PUBLIC" Id="idSubsanacion" Name="003-001 Subsanacion">
+            <ProcessHeader DurationUnit="m">
+                <Created>2012-08-29T11:35:55+0200</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>mmhc</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfCodigoProcedimiento" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfMetodoNotificacion" Index="2" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfRolAdministrativoDinamico" Index="3" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfRefuhaSubsanacion" Index="4" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfRolFirmanteDinamico" Index="5" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioNumIdentificacion" Index="7" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioNombre" Index="8" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioApellido1" Index="9" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioApellido2" Index="10" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDestinatarioMail" Index="11" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfIinteresadoNombreCompleto" Index="12" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfInteresadoNumIdentificacion" Index="13" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfDomicilioCompletoNotificaciones" Index="14" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfOpcionesFinalizacion" Index="15" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfFechaNotificacionRequerimiento" Index="16" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfEstadoNotificacionRequerimiento" Index="17" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfFechaSubsanacion" Index="18" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfFechaNotificacionDesistimiento" Index="19" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfEstadoNotificacionDesistimiento" Index="20" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="pfAccionRealizar" Index="21" Mode="OUT">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="metodoNotificacion" IsArray="FALSE" Name="metodoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="rolAdministrativo" IsArray="FALSE" Name="rolAdministrativo">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="refuhaSubsanacion" IsArray="FALSE" Name="refuhaSubsanacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNumIdentificacion" IsArray="FALSE" Name="destinatarioNumIdentificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombreCompleto" IsArray="FALSE" Name="destinatarioNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombre" IsArray="FALSE" Name="destinatarioNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido1" IsArray="FALSE" Name="destinatarioApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido2" IsArray="FALSE" Name="destinatarioApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioMail" IsArray="FALSE" Name="destinatarioMail">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombreCompleto" IsArray="FALSE" Name="interesadoNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNumIdentificacion" IsArray="FALSE" Name="interesadoNumIdentificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="domicilioCompletoNotificaciones" IsArray="FALSE" Name="domicilioCompletoNotificaciones">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="nombreDocNotificar" IsArray="FALSE" Name="nombreDocNotificar">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>003-001 Requerimiento Subsanacion.pdf</InitialValue>
+                </DataField>
+                <DataField Id="estadoNotificacion" IsArray="FALSE" Name="estadoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaNotificacion" IsArray="FALSE" Name="fechaNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="accionRealizar" IsArray="FALSE" Name="accionRealizar">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tramitaManual" IsArray="FALSE" Name="tramitaManual">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>no</InitialValue>
+                </DataField>
+                <DataField Id="nombreProcedimiento" IsArray="FALSE" Name="nombreProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaSubsanacion" IsArray="FALSE" Name="fechaSubsanacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tipoTramite" IsArray="FALSE" Name="tipoTramite">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="codigoProcedimiento" IsArray="FALSE" Name="codigoProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>SUBSANACION</InitialValue>
+                </DataField>
+                <DataField Id="resultadoSubproceso" IsArray="FALSE" Name="resultadoSubproceso">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="sistema" Name="sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="AREA_CENTRO_Adm" Name="AREA_CENTRO_Adm">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$rolAdministrativo</Description>
+                </Participant>
+                <Participant Id="rolFirmante" Name="rolFirmante">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$rolAdministrativo</Description>
+                </Participant>
+                <Participant Id="Destinatario" Name="Destinatario">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$destinatarioNumIdentificacion</Description>
+                </Participant>
+                <Participant Id="REFUHA" Name="REFUHA">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+                <Participant Id="sistema1" Name="sistema1">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="sistema2" Name="sistema2">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="tramitarActividad" Name="tramitarActividad">
+                    <FormalParameters>
+                        <FormalParameter Id="definicionActividad" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="usuario" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerNombreProcedimiento" Name="obtenerNombreProcedimiento">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreProcedimiento" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="cambiaTipoAnexoToArchivo" Name="cambiaTipoAnexoToArchivo">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="textoAdicional" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="registraDocumento" Name="registraDocumento">
+                    <FormalParameters>
+                        <FormalParameter Id="tipoRegistro" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="nombreDocumento" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="fPropiedades" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="clave" Index="3" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="informarWFRegistro" Name="informarWFRegistro">
+                    <FormalParameters>
+                        <FormalParameter Id="clasificacion" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="clave" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="firmaServidor" Name="firmaServidor">
+                    <FormalParameters>
+                        <FormalParameter Id="clasificacion" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="nombreDocumento" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoUsuariosRol" Name="mandaCorreoUsuariosRol">
+                    <FormalParameters>
+                        <FormalParameter Id="rol" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="CLAVEASUNTO" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="CLAVECUERPO" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="generarFormulario" Name="generarFormulario">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+            </Applications>
+            <Activities>
+                <Activity Id="idAUTOFINSubsanacion_act1" Name="AUTO FIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1390,139"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializaVariables" Name="Inicializa Variables">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioApellido1</ActualParameter>
+                                <ActualParameter>destinatarioApellido1</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioApellido2</ActualParameter>
+                                <ActualParameter>destinatarioApellido2</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioMail</ActualParameter>
+                                <ActualParameter>destinatarioMail</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioNombre</ActualParameter>
+                                <ActualParameter>destinatarioNombre</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDestinatarioNumIdentificacion</ActualParameter>
+                                <ActualParameter>destinatarioNumIdentificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfDomicilioCompletoNotificaciones</ActualParameter>
+                                <ActualParameter>domicilioCompletoNotificaciones</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfIinteresadoNombreCompleto</ActualParameter>
+                                <ActualParameter>interesadoNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfInteresadoNumIdentificacion</ActualParameter>
+                                <ActualParameter>interesadoNumIdentificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfMetodoNotificacion</ActualParameter>
+                                <ActualParameter>metodoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfRolAdministrativoDinamico</ActualParameter>
+                                <ActualParameter>rolAdministrativo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombre, " ")</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombreCompleto, $destinatarioApellido1)</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombreCompleto, " ")</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>concat($destinatarioNombreCompleto, $destinatarioApellido2)</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerNombreProcedimiento" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>nombreProcedimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfRefuhaSubsanacion</ActualParameter>
+                                <ActualParameter>refuhaSubsanacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="93,97"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idElaborarRequerimientoSubsanacion" Name="1.0. Elaborar Requerimiento Subsanacion">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="94,41"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionRequeimiento" Name="1.2. Notificacion Requerimiento">
+                    <Implementation>
+                        <SubFlow Execution="SYNCHR" Id="idNotificacion">
+                            <ActualParameters>
+                                <ActualParameter>$ultimo</ActualParameter>
+                                <ActualParameter>$metodoNotificacion</ActualParameter>
+                                <ActualParameter>$rolAdministrativo</ActualParameter>
+                                <ActualParameter>$refuhaSubsanacion</ActualParameter>
+                                <ActualParameter>$destinatarioNumIdentificacion</ActualParameter>
+                                <ActualParameter>$destinatarioNombre</ActualParameter>
+                                <ActualParameter>$destinatarioApellido1</ActualParameter>
+                                <ActualParameter>$destinatarioApellido2</ActualParameter>
+                                <ActualParameter>$destinatarioMail</ActualParameter>
+                                <ActualParameter>$interesadoNombreCompleto</ActualParameter>
+                                <ActualParameter>$interesadoNumIdentificacion</ActualParameter>
+                                <ActualParameter>$domicilioCompletoNotificaciones</ActualParameter>
+                                <ActualParameter>$nombreDocNotificar</ActualParameter>
+                                <ActualParameter>fechaNotificacion</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </SubFlow>
+                    </Implementation>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="457,127"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTipoTramite" Name="?Tipo de Tramite?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idSubsanacion_tra6"/>
+                                    <TransitionRef Id="idSubsanacion_tra5"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="580,106"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTONOTIFICADO" Name="AUTONOTIFICADO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Destinatario</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="AND">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idSubsanacion_tra111"/>
+                                    <TransitionRef Id="idSubsanacion_tra112"/>
+                                    <TransitionRef Id="idSubsanacion_tra9"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Destinatario"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="653,56"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idElaborarResolucionDesistimiento" Name="7.0. Elaborar Resolucion Desistimiento">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="689,108"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idNotificacionResolucionDesistimiento" Name="8.1. Notificacion Resolucion Desistimiento">
+                    <Implementation>
+                        <SubFlow Execution="SYNCHR" Id="idNotificacion">
+                            <ActualParameters>
+                                <ActualParameter>$ultimo</ActualParameter>
+                                <ActualParameter>$metodoNotificacion</ActualParameter>
+                                <ActualParameter>$rolAdministrativo</ActualParameter>
+                                <ActualParameter>$refuhaSubsanacion</ActualParameter>
+                                <ActualParameter>$destinatarioNumIdentificacion</ActualParameter>
+                                <ActualParameter>$destinatarioNombre</ActualParameter>
+                                <ActualParameter>$destinatarioApellido1</ActualParameter>
+                                <ActualParameter>$destinatarioApellido2</ActualParameter>
+                                <ActualParameter>$destinatarioMail</ActualParameter>
+                                <ActualParameter>$interesadoNombreCompleto</ActualParameter>
+                                <ActualParameter>$interesadoNumIdentificacion</ActualParameter>
+                                <ActualParameter>$domicilioCompletoNotificaciones</ActualParameter>
+                                <ActualParameter>$nombreDocNotificar</ActualParameter>
+                                <ActualParameter>fechaNotificacion</ActualParameter>
+                                <ActualParameter>estadoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </SubFlow>
+                    </Implementation>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="997,131"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idIncoporarDocumentacionAportadaPorCorreo" Name="3.0. Incorporar Documentacion Aportada Por Correo">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idSubsanacion_tra18"/>
+                                    <TransitionRef Id="idSubsanacion_tra12"/>
+                                    <TransitionRef Id="idSubsanacion_tra32"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="815,237"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAportarDocumentacion" Name="5.0. Aportar Documentacion">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Destinatario</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idSubsanacion_tra14"/>
+                                    <TransitionRef Id="idSubsanacion_tra13"/>
+                                    <TransitionRef Id="idSubsanacion_tra29"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Destinatario"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="821,56"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRecepcionarDocumentacionAportadaPresencialmente" Name="4.0. Recepcionar Documentacion Aportada Presencialmente">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>REFUHA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idSubsanacion_tra34"/>
+                                    <TransitionRef Id="idSubsanacion_tra17"/>
+                                    <TransitionRef Id="idSubsanacion_tra20"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="REFUHA"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="745,152"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINESPERARDOCUMENTACION" Name="FIN ESPERA DOCUMENTACION">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="AND"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1050,35"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitarActividades" Name="Tramitar Actividades">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>tramitaManual</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idAportarDocumentacion"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idRecepcionarDocumentacionAportadaPresencialmente"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="816,51"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFININCORPORARDOCUMENTACION" Name="FIN INCORPORAR DOCUMENTACION">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema1</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema1"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="961,52"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFININCORPORARDOCUMENTACION1" Name="FIN INCORPORAR DOCUMENTACION">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="939,31"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitarActividades1" Name="Tramitar Actividades">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>tramitaManual</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idIncoporarDocumentacionAportadaPorCorreo"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idRecepcionarDocumentacionAportadaPresencialmente"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="824,31"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFININCORPORARDOCUMENTACION2" Name="FIN INCORPORAR DOCUMENTACION">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1049,149"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTramitarActividades2" Name="Tramitar Actividades">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>tramitaManual</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idAportarDocumentacion"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="tramitarActividad" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"idIncoporarDocumentacionAportadaPorCorreo"</ActualParameter>
+                                <ActualParameter>$ultimo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="745,148"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idComprobarResultadoSubsanacion" Name="6.0. Comprobar Resultado Subsanacion">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1282,194"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAccionRealizar" Name="?Accion Realizar?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idSubsanacion_tra24"/>
+                                    <TransitionRef Id="idSubsanacion_tra25"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1283,109"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizaVariablesSalida" Name="Actualiza Variables Salida">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$accionRealizar</ActualParameter>
+                                <ActualParameter>pfAccionRealizar</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Requerimiento.pdf"</ActualParameter>
+                                <ActualParameter>$pfFechaNotificacionRequerimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Aportacion Documentacion Subsanada Presencialmente.pdf"</ActualParameter>
+                                <ActualParameter>$fechaNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Aportacion Documentacion Subsanada por Correos.pdf"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Aportacion Documentacion Subsanada Electronicamente.pdf"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Resolucion Desistimiento.pdf"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Documento Justificativo del Cotejo.pdf"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1286,135"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizarVariablesNotificacion" Name="Actualizar Variables Notificacion">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fechaNotificacion</ActualParameter>
+                                <ActualParameter>pfFechaNotificacionRequerimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$estadoNotificacion</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacionRequerimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="informarWFRegistro" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$pfCodigoProcedimiento</ActualParameter>
+                                <ActualParameter>"DOCUMENTACIONSUBSANADA"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="582,126"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizarVariablesNotificacion1" Name="Actualizar Variables Notificacion">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$fechaNotificacion</ActualParameter>
+                                <ActualParameter>pfFechaNotificacionDesistimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$estadoNotificacion</ActualParameter>
+                                <ActualParameter>pfEstadoNotificacionDesistimiento</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1144,133"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFININCORPORAR" Name="AUTOFININCORPORAR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>AREA_CENTRO_Adm</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="AREA_CENTRO_Adm"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="960,243"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFINAPORTAR" Name="AUTOFINAPORTAR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>REFUHA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="REFUHA"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1049,148"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRealizarCotejoDocumentacion" Name="2.0. Realizar Cotejo Documentacion">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>REFUHA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="REFUHA"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="461,201"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizarNotificacion" Name="Actualizar Notificacion">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Requerimiento.pdf"</ActualParameter>
+                                <ActualParameter>nombreDocNotificar</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="354,126"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizarNotificacionDesistimiento" Name="Actualizar Notificacion Desistimiento">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Resolucion Desistimiento.pdf"</ActualParameter>
+                                <ActualParameter>nombreDocNotificar</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="691,128"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFirmarAportacionPresencial" Name="4.1. Firmar Aportacion Presencial">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>REFUHA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="REFUHA"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="831,34"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFINCORREO" Name="AUTOFINCORREO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Destinatario</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Destinatario"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="936,56"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEnviarMailRolIniciador" Name="Enviar Mail Rol Iniciador">
+                    <Implementation>
+                        <Tool Id="mandaCorreoUsuariosRol" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$rolAdministrativo</ActualParameter>
+                                <ActualParameter>"ASUNTO.FINALIZACIONCOTEJO"</ActualParameter>
+                                <ActualParameter>"CUERPO.FINALIZACIONCOTEJO"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema2"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1281,85"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAnularSubsanacion" Name="Anular Subsanacion">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"anular"</ActualParameter>
+                                <ActualParameter>accionRealizar</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="209,27"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTipoTramite1" Name="?Tipo de Tramite?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idSubsanacion_tra10"/>
+                                    <TransitionRef Id="idSubsanacion_tra42"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="209,125"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizaVariablesSalida1" Name="Actualiza Variables Salida">
+                    <Implementation>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Aportacion Documentacion Subsanada Presencialmente.pdf"</ActualParameter>
+                                <ActualParameter>$fechaNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Aportacion Documentacion Subsanada por Correos.pdf"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Aportacion Documentacion Subsanada Electronicamente.pdf"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="842,129"/>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idSubsanacion_act1">
+                    <Implementation>
+                        <Tool Id="generarFormulario" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"003-001 Resolucion Desistimiento.pdf"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="851,194"/>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition From="idInicializaVariables" Id="idSubsanacion_tra1" To="idElaborarRequerimientoSubsanacion">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idElaborarRequerimientoSubsanacion" Id="idSubsanacion_tra2" To="idTipoTramite1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="250,327"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificacionRequeimiento" Id="idSubsanacion_tra4" To="idActualizarVariablesNotificacion">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTipoTramite" Id="idSubsanacion_tra5" To="idAUTONOTIFICADO">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="616,794"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idElaborarResolucionDesistimiento" Id="idSubsanacion_tra7" To="idActualizarNotificacionDesistimiento">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTONOTIFICADO" Id="idSubsanacion_tra112" To="idAportarDocumentacion">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTONOTIFICADO" Id="idSubsanacion_tra111" To="idIncoporarDocumentacionAportadaPorCorreo">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="691,525"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTONOTIFICADO" Id="idSubsanacion_tra9" To="idRecepcionarDocumentacionAportadaPresencialmente">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="688,1201"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idIncoporarDocumentacionAportadaPorCorreo" Id="idSubsanacion_tra12" To="idTramitarActividades">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitarActividades" Id="idSubsanacion_tra15" To="idFININCORPORARDOCUMENTACION">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idIncoporarDocumentacionAportadaPorCorreo" Id="idSubsanacion_tra18" To="idAUTOFININCORPORAR">
+                    <Condition Type="CONDITION">$tramitaManual="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFININCORPORARDOCUMENTACION" Id="idSubsanacion_tra19" To="idFINESPERARDOCUMENTACION">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1100,640"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitarActividades1" Id="idSubsanacion_tra151" To="idFININCORPORARDOCUMENTACION1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTramitarActividades2" Id="idSubsanacion_tra152" To="idFirmarAportacionPresencial">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAportarDocumentacion" Id="idSubsanacion_tra13" To="idTramitarActividades1">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAportarDocumentacion" Id="idSubsanacion_tra14" To="idAUTOFINCORREO">
+                    <Condition Type="CONDITION">$tramitaManual="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFININCORPORARDOCUMENTACION1" Id="idSubsanacion_tra16" To="idFINESPERARDOCUMENTACION">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecepcionarDocumentacionAportadaPresencialmente" Id="idSubsanacion_tra17" To="idTramitarActividades2">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecepcionarDocumentacionAportadaPresencialmente" Id="idSubsanacion_tra20" To="idAUTOFINAPORTAR">
+                    <Condition Type="CONDITION">$tramitaManual="si"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFININCORPORARDOCUMENTACION2" Id="idSubsanacion_tra21" To="idFINESPERARDOCUMENTACION">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFINESPERARDOCUMENTACION" Id="idSubsanacion_tra22" To="idComprobarResultadoSubsanacion">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1181,923-1184,481"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idComprobarResultadoSubsanacion" Id="idSubsanacion_tra23" To="idAccionRealizar">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAccionRealizar" Id="idSubsanacion_tra24" To="idActualizaVariablesSalida">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAccionRealizar" Id="idSubsanacion_tra25" To="idSubsanacion_act1">
+                    <Condition Type="CONDITION">$accionRealizar="desestimar"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="904,388"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizaVariablesSalida" Id="idSubsanacion_tra26" To="idAUTOFINSubsanacion_act1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idNotificacionResolucionDesistimiento" Id="idSubsanacion_tra27" To="idActualizarVariablesNotificacion1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizarNotificacionDesistimiento" Id="idSubsanacion_tra28" To="idActualizaVariablesSalida1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizarVariablesNotificacion" Id="idSubsanacion_tra30" To="idTipoTramite">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizarVariablesNotificacion1" Id="idSubsanacion_tra31" To="idActualizaVariablesSalida">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idIncoporarDocumentacionAportadaPorCorreo" Id="idSubsanacion_tra32" To="idFININCORPORARDOCUMENTACION">
+                    <Condition Type="EXCEPTION">wait(10,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTOFININCORPORAR" Id="idSubsanacion_tra33" To="idFININCORPORARDOCUMENTACION">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRecepcionarDocumentacionAportadaPresencialmente" Id="idSubsanacion_tra34" To="idFININCORPORARDOCUMENTACION2">
+                    <Condition Type="EXCEPTION">wait(10,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTOFINAPORTAR" Id="idSubsanacion_tra35" To="idFININCORPORARDOCUMENTACION2">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTipoTramite" Id="idSubsanacion_tra6" To="idRealizarCotejoDocumentacion">
+                    <Condition Type="CONDITION">$tipoTramite="cotejo"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="500,388"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idRealizarCotejoDocumentacion" Id="idSubsanacion_tra36" To="idEnviarMailRolIniciador">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1326,1303"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idFirmarAportacionPresencial" Id="idSubsanacion_tra37" To="idFININCORPORARDOCUMENTACION2">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAUTOFINCORREO" Id="idSubsanacion_tra8" To="idFININCORPORARDOCUMENTACION1">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAportarDocumentacion" Id="idSubsanacion_tra29" To="idFININCORPORARDOCUMENTACION1">
+                    <Condition Type="EXCEPTION">wait(15,days)</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizarNotificacion" Id="idSubsanacion_tra38" To="idNotificacionRequeimiento">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idEnviarMailRolIniciador" Id="idSubsanacion_tra41" To="idComprobarResultadoSubsanacion">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTipoTramite1" Id="idSubsanacion_tra10" To="idAnularSubsanacion">
+                    <Condition Type="CONDITION">$tipoTramite="anular"</Condition>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idAnularSubsanacion" Id="idSubsanacion_tra11" To="idActualizaVariablesSalida">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="1325,58"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idTipoTramite1" Id="idSubsanacion_tra42" To="idActualizarNotificacion">
+                    <Condition Type="OTHERWISE"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idActualizaVariablesSalida1" Id="idSubsanacion_tra3" To="idNotificacionResolucionDesistimiento">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"/>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition From="idSubsanacion_act1" Id="idSubsanacion_tra39" To="idElaborarResolucionDesistimiento">
+                    <Condition Type="CONDITION"/>
+                    <ExtendedAttributes>
+                        <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="881,390"/>
+                        <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idInicializaVariables,X_OFFSET=119,Y_OFFSET=31,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"/>
+                <ExtendedAttribute Name="StartOfWorkflow" Value="sistema;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idAUTOFINSubsanacion_act1,X_OFFSET=1511,Y_OFFSET=150,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"/>
+                <ExtendedAttribute Name="EndOfWorkflow" Value="sistema;"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="sistema;AREA_CENTRO_Adm;sistema1;Destinatario;sistema2;REFUHA"/>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>
