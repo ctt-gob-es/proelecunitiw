@@ -1,0 +1,2569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Package xmlns="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TiFlows="http://www.openbusinessengine.org/2003/TiFlows1.0" Id="idAyudasEstudiosMaster" Name="07-05 Ayudas Matricula Estudios Master" xsi:schemaLocation="http://www.wfmc.org/2002/XPDL1.0 xpdl-1.0.xsd">
+    <PackageHeader xmlns="">
+        <XPDLVersion>1.0</XPDLVersion>
+        <Vendor>Together</Vendor>
+        <Created>2021-07-27T13:12:07+0200</Created>
+    </PackageHeader>
+    <RedefinableHeader xmlns="" PublicationStatus="RELEASED">
+        <Author>STL</Author>
+        <Version>1.0</Version>
+    </RedefinableHeader>
+    <WorkflowProcesses xmlns="">
+        <WorkflowProcess Id="idAyudasEstudiosMaster" Name="07-05 Ayudas Matricula Estudios Master" AccessLevel="PUBLIC">
+            <ProcessHeader DurationUnit="m">
+                <Created>2021-07-27T13:13:02+0200</Created>
+            </ProcessHeader>
+            <RedefinableHeader PublicationStatus="RELEASED">
+                <Author>STL</Author>
+                <Version>1.0</Version>
+            </RedefinableHeader>
+            <FormalParameters>
+                <FormalParameter Id="ultimo" Index="0" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="tipoDeLogado" Index="1" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+                <FormalParameter Id="idConvocatoria" Index="2" Mode="IN">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </FormalParameter>
+            </FormalParameters>
+            <DataFields>
+                <DataField Id="codigoProcedimiento" Name="codigoProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                    <InitialValue>07-05</InitialValue>
+                </DataField>
+                <DataField Id="nombreProcedimiento" Name="nombreProcedimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="metadatoIdentificativoExpediente" Name="metadatoIdentificativoExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interno_tiempoMedioFinalizacion" Name="interno_tiempoMedioFinalizacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesado" Name="interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="tipoDocumento" Name="tipoDocumento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNIF" Name="interesadoNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombre" Name="interesadoNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoApellido1" Name="interesadoApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoApellido2" Name="interesadoApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="interesadoNombreCompleto" Name="interesadoNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNIF" Name="destinatarioNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombre" Name="destinatarioNombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido1" Name="destinatarioApellido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioApellido2" Name="destinatarioApellido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinatarioNombreCompleto" Name="destinatarioNombreCompleto">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="mailAvisos" Name="mailAvisos">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="mailNotificaciones" Name="mailNotificaciones">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numeroMovil" Name="numeroMovil">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="metodoNotificacion" Name="metodoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaNotificacion" Name="fechaNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacion" Name="estadoNotificacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="nombreDocumentoNotificar" Name="nombreDocumentoNotificar">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaNotificacionRequerimiento" Name="fechaNotificacionRequerimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="estadoNotificacionRequerimiento" Name="estadoNotificacionRequerimiento">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="fechaActual" Name="fechaActual">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="accionRealizar" Name="accionRealizar">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="codigoExpediente" Name="codigoExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="numeroTelefonoFijo" Name="numeroTelefonoFijo">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="titulacionAcademica" Name="titulacionAcademica">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="pais" Name="pais">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="universidad" Name="universidad">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="notaMedia" Name="notaMedia">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="ayudaMasterTipo" Name="ayudaMasterTipo">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="ayudaMaster" Name="ayudaMaster">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="codigoSIIUAyudaMaster" Name="codigoSIIUAyudaMaster">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_id" Name="convocatoria_id">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_nombre" Name="convocatoria_nombre">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_rol" Name="convocatoria_rol">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_fechaInicio" Name="convocatoria_fechaInicio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_fechaFin" Name="convocatoria_fechaFin">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_publicacionProvisional" Name="convocatoria_publicacionProvisional">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_inicioSubsanacion" Name="convocatoria_inicioSubsanacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_finSubsanacion" Name="convocatoria_finSubsanacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_publicacionDefinitiva" Name="convocatoria_publicacionDefinitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_modificaFecha" Name="convocatoria_modificaFecha">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="convocatoria_configuracion1" Name="convocatoria_configuracion1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="resultadoProvisional" Name="resultadoProvisional">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="resultadoDefinitivo" Name="resultadoDefinitivo">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="noAdmitidoCausa" Name="noAdmitidoCausa">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="noAdmitidoCausaDefinitiva" Name="noAdmitidoCausaDefinitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluidoOtrosDefinitiva" Name="excluidoOtrosDefinitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluidoOtros1" Name="excluidoOtros1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluidoOtros2" Name="excluidoOtros2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido1" Name="excluido1">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido1Definitiva" Name="excluido1Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido2" Name="excluido2">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido2Definitiva" Name="excluido2Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido3" Name="excluido3">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido3Definitiva" Name="excluido3Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido4" Name="excluido4">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido4Definitiva" Name="excluido4Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido5" Name="excluido5">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido5Definitiva" Name="excluido5Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido6" Name="excluido6">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido6Definitiva" Name="excluido6Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido7" Name="excluido7">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido7Definitiva" Name="excluido7Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido8" Name="excluido8">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido8Definitiva" Name="excluido8Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido9" Name="excluido9">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="excluido9Definitiva" Name="excluido9Definitiva">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_IdInteresado" Name="registro_IdInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NifInteresado" Name="registro_NifInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NombreInteresado" Name="registro_NombreInteresado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Apellido1Interesado" Name="registro_Apellido1Interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Apellido2Interesado" Name="registro_Apellido2Interesado">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_IdDomicilio" Name="registro_IdDomicilio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_NombreDomicilio" Name="registro_NombreDomicilio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_OficinaRegistro" Name="registro_OficinaRegistro">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Destino" Name="registro_Destino">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_TipoTransporte" Name="registro_TipoTransporte">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Origen" Name="registro_Origen">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_refExpediente" Name="registro_refExpediente">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_numeroEntrada" Name="registro_numeroEntrada">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_fechaEntrada" Name="registro_fechaEntrada">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_numeroSalida" Name="registro_numeroSalida">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_fechaSalida" Name="registro_fechaSalida">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="confirmar" Name="confirmar">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="etapa" Name="etapa">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="situacion" Name="situacion">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registrar" Name="registrar">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="documentacionSubsanada" Name="documentacionSubsanada">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="admitir" Name="admitir">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registro_Resumen" Name="registro_Resumen">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="solicitanteNIF" Name="solicitanteNIF">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="registrarSolicitudOficio" Name="registrarSolicitudOficio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="destinoSolicitudOficio" Name="destinoSolicitudOficio">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+                <DataField Id="observaciones" Name="observaciones">
+                    <DataType>
+                        <BasicType Type="STRING"/>
+                    </DataType>
+                </DataField>
+            </DataFields>
+            <Participants>
+                <Participant Id="ciudadanoCertificado" Name="ciudadanoCertificado">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+                <Participant Id="Interesado" Name="Interesado">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$interesado</Description>
+                </Participant>
+                <Participant Id="sistema" Name="sistema">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="GESTOR_CONVOCATORIA" Name="GESTOR_CONVOCATORIA">
+                    <ParticipantType Type="RESOURCE_SET"/>
+                    <Description>participant=$convocatoria_rol</Description>
+                </Participant>
+                <Participant Id="System2" Name="System2">
+                    <ParticipantType Type="SYSTEM"/>
+                </Participant>
+                <Participant Id="rolFicticio" Name="rolFicticio">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+                <Participant Id="ESTUDIOS_POSGRADO_ADM" Name="ESTUDIOS_POSGRADO_ADM">
+                    <ParticipantType Type="ROLE"/>
+                </Participant>
+            </Participants>
+            <Applications>
+                <Application Id="obtenerUsuarioPropietario" Name="obtenerUsuarioPropietario">
+                    <FormalParameters>
+                        <FormalParameter Id="anagrama" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerTiempoMedioFinalizacion" Name="obtenerTiempoMedioFinalizacion">
+                    <FormalParameters>
+                        <FormalParameter Id="tiempoMedioFinalizacion" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="informarWFRegistro" Name="informarWFRegistro">
+                    <FormalParameters>
+                        <FormalParameter Id="CLASIFICACION" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="CLAVE" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="asignaValor" Name="asignaValor">
+                    <FormalParameters>
+                        <FormalParameter Id="entrada" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="salida" Index="1" Mode="INOUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoUsuariosRol" Name="mandaCorreoUsuariosRol">
+                    <FormalParameters>
+                        <FormalParameter Id="rol" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveAsunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveCuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="mandaCorreoEspecifico" Name="mandaCorreoEspecifico">
+                    <FormalParameters>
+                        <FormalParameter Id="para" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveAsunto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="claveCuerpo" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="actualizaEtapaSituacion" Name="actualizaEtapaSituacion">
+                    <FormalParameters>
+                        <FormalParameter Id="codProcedimiento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="codSituacion" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerNombreSituacion" Name="obtenerNombreSituacion">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreProcedimiento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="inicializarConvocatoria" Name="inicializarConvocatoria">
+                    <FormalParameters>
+                        <FormalParameter Id="idConvocatoria" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="tramitarActividad" Name="tramitarActividad">
+                    <FormalParameters>
+                        <FormalParameter Id="definicionActividad" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="usuario" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerNumeroExpediente" Name="obtenerNumeroExpediente">
+                    <FormalParameters>
+                        <FormalParameter Id="numeroExpediente" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="obtenerNombreProcedimiento" Name="obtenerNombreProcedimiento">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreProcedimiento" Index="0" Mode="OUT">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="exceptionOnNull" Name="exceptionOnNull">
+                    <FormalParameters>
+                        <FormalParameter Id="variable" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="mensajeKey" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="invocacionSistemaExterno" Name="invocacionSistemaExterno">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreServicio" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="comprobarAlumnoUAM" Name="comprobarAlumnoUAM">
+                    <FormalParameters>
+                        <FormalParameter Id="correoAlumnoUAM" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="comprobarGestionConvocatoriasActivas" Name="comprobarGestionConvocatoriasActivas"/>
+                <Application Id="obtenerDatosConvocatoria" Name="obtenerDatosConvocatoria">
+                    <FormalParameters>
+                        <FormalParameter Id="idConvocatoria" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="estaAbierta" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="registraDocumento" Name="registraDocumento">
+                    <FormalParameters>
+                        <FormalParameter Id="tipoRegistro" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="nombreDocumento" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="fpropiedades" Index="2" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="clave" Index="3" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="comprobarPermisosInicio" Name="comprobarPermisosInicio"/>
+                <Application Id="cambiaTipoAnexoToArchivo" Name="cambiaTipoAnexoToArchivo">
+                    <FormalParameters>
+                        <FormalParameter Id="nombreDocumento" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                        <FormalParameter Id="texto" Index="1" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+                <Application Id="cambiarDocumentosAdicionalesArchivosLibres" Name="cambiarDocumentosAdicionalesArchivosLibres"/>
+                <Application Id="permitirBusquedaExpediente" Name="permitirBusquedaExpediente">
+                    <FormalParameters>
+                        <FormalParameter Id="anagrama" Index="0" Mode="IN">
+                            <DataType>
+                                <BasicType Type="STRING"/>
+                            </DataType>
+                        </FormalParameter>
+                    </FormalParameters>
+                </Application>
+            </Applications>
+            <Activities>
+                <Activity Id="AUTOINICIOCIUDADANOCERTIFICADO" Name="AUTOINICIOCIUDADANOCERTIFICADO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>ciudadanoCertificado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="ciudadanoCertificado"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="167,63"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializarInteresado" Name="Inicializar Interesado">
+                    <Implementation>
+                        <Tool Id="obtenerUsuarioPropietario" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>interesado</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$ultimo</ActualParameter>
+                                <ActualParameter>metadatoIdentificativoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="comprobarPermisosInicio" Type="APPLICATION"/>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesado</ActualParameter>
+                                <ActualParameter>metadatoIdentificativoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="comprobarGestionConvocatoriasActivas" Type="APPLICATION"/>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesado</ActualParameter>
+                                <ActualParameter>interesadoNIF</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>metadatoIdentificativoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>solicitanteNIF</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>destinatarioNIF</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNombre</ActualParameter>
+                                <ActualParameter>destinatarioNombre</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoApellido1</ActualParameter>
+                                <ActualParameter>destinatarioApellido1</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoApellido2</ActualParameter>
+                                <ActualParameter>destinatarioApellido2</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNombreCompleto</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="636,203"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idHayConvocatoria" Name="? Hay Convocatoria ?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra3"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra4"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="923,78"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idSeleccionConvocatoria" Name="1.0 Seleccionar Convocatoria">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra8"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra5"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="920,71"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializarConvocatoria" Name="Inicializar Convocatoria">
+                    <Implementation>
+                        <Tool Id="exceptionOnNull" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"convocatoria_id"</ActualParameter>
+                                <ActualParameter>"errorConvocatoria"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="inicializarConvocatoria" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$convocatoria_id</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"12"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1095,81"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCumplimentarSolictud" Name="2.0 Cumplimentar Solicitud">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra10"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra7"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1279,53"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCerradoInactividad" Name="Cerrado inactividad">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"13"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1579,50"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCerrarSolicitud" Name="CERRAR SOLICITUD">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1580,171"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idActualizaDestinatarioCiudadano" Name="Actualiza Destinatario Ciudadano">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>destinatarioNIF</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNombre</ActualParameter>
+                                <ActualParameter>destinatarioNombre</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoApellido1</ActualParameter>
+                                <ActualParameter>destinatarioApellido1</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoApellido2</ActualParameter>
+                                <ActualParameter>destinatarioApellido2</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNombreCompleto</ActualParameter>
+                                <ActualParameter>destinatarioNombreCompleto</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="916,200"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEstadoSolicitudRegistrada" Name="Estado Solicitud Registrada">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"14"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>""</ActualParameter>
+                                <ActualParameter>convocatoria_modificaFecha</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="permitirBusquedaExpediente" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$convocatoria_rol</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1867,112"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEsperaFinSolicitud" Name="4.0 Espera fin solicitud">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolFicticio</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra31"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra32"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolFicticio"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1869,53"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEstadoPendienteRevisarSolicitud" Name="Estado Pendiente Revisar Solicitud">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"21"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2124,176"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idIFinsolicitud" Name="FIN SOLICITUD">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>rolFicticio</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="rolFicticio"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1870,164"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRevisionProvisional" Name="5.0 Revision Provisional">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>GESTOR_CONVOCATORIA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra35"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra36"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="GESTOR_CONVOCATORIA"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2122,69"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idResultadoProvisional" Name="? Resultado Provisional ?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra40"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra37"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra41"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra42"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra51"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2320,140"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCorreoRevisionProvisional" Name="Correo revision provisional">
+                    <Implementation>
+                        <Tool Id="mandaCorreoUsuariosRol" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$convocatoria_rol</ActualParameter>
+                                <ActualParameter>"MAIL.ASUNTO.SINREVISION"</ActualParameter>
+                                <ActualParameter>"MAIL.CUERPO.SINREVISION"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2323,292"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCerradoDuplicado" Name="Cerrado duplicado">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"44"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2743,62"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idSolicitudAdmitidaDefinitiva" Name="Admitida provisional">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$resultadoProvisional</ActualParameter>
+                                <ActualParameter>resultadoDefinitivo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"22"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2746,283"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEstadoSubsanando" Name="Estado subsanando">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"31"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoEspecifico" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>"MAIL.EXCLUIDOPROVISIONAL.ASUNTO"</ActualParameter>
+                                <ActualParameter>"MAIL.EXCLUIDOPROVISIONAL.CUERPO"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>""</ActualParameter>
+                                <ActualParameter>convocatoria_modificaFecha</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2911,65"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOFIN" Name="AUTO FIN">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="4072,71"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRevisionSubsanacion" Name="7.0 Revision Subsanacion">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>GESTOR_CONVOCATORIA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra44"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra63"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="GESTOR_CONVOCATORIA"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="4063,66"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idASubsanarDocumentoCiudadano" Name="6.0 Subsanar documentacion ciudadano">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>Interesado</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra53"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra52"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="Interesado"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3281,78"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idGenerarDocumentoAportacion" Name="Generar Documento Aportacion">
+                    <Implementation>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"07-05 Aportacion Electronica de Documentacion.odt"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiarDocumentosAdicionalesArchivosLibres" Type="APPLICATION"/>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>documentacionSubsanada</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"32"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoEspecifico" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>"MAIL.SUBSANACIONPRESENTADA.ASUNTO"</ActualParameter>
+                                <ActualParameter>"MAIL.SUBSANACIONPRESENTADA.CUERPO"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3284,79"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idEsSubsanada" Name="? Es subsanada ?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra58"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra59"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="4053,234"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idDocumentacionNoSubsanada" Name="Documentacion no subsanada">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"43"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$resultadoProvisional</ActualParameter>
+                                <ActualParameter>resultadoDefinitivo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3862,231"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idDocumentacionSubsanada" Name="Documentacion subsanada">
+                    <Implementation>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"41"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoEspecifico" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>"MAIL.SUBSANACIONPRESENTADA.ASUNTO"</ActualParameter>
+                                <ActualParameter>"MAIL.SUBSANACIONPRESENTADA.CUERPO"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="4233,233"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idReiniciarSubsanacion" Name="? Reiniciar subsanacion ?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra62"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra64"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3076,19"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idIniciarSubsanacion" Name="?Iniciar subsanacion?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra39"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra17"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="GESTOR_CONVOCATORIA"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1867,73"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAUTOINICIOFUNCIONARIO" Name="AUTO INICIO FUNCIONARIO">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>ESTUDIOS_POSGRADO_ADM</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="ESTUDIOS_POSGRADO_ADM"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="166,43"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idUNIR" Name="UNIR">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="AND"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="166,202"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializar1" Name="Inicializar">
+                    <Implementation>
+                        <Tool Id="obtenerTiempoMedioFinalizacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>interno_tiempoMedioFinalizacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerNumeroExpediente" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>codigoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerNombreProcedimiento" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>codigoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"11"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"electronicaSede"</ActualParameter>
+                                <ActualParameter>metodoNotificacion</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$idConvocatoria</ActualParameter>
+                                <ActualParameter>convocatoria_id</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="informarWFRegistro" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"SOLICITUD"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="333,204"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTipoDeLogado" Name="?Tipo de logado?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra20"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra21"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="480,206"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idSeleccionConvocatoriaFuncionario" Name="1.0 Seleccionar Convocatoria Funcionario">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>ESTUDIOS_POSGRADO_ADM</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="ESTUDIOS_POSGRADO_ADM"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="479,39"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idCumplimentarSolicitudFuncionario" Name="2.0 Cumplimentar Solicitud Funcionario">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>ESTUDIOS_POSGRADO_ADM</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="ESTUDIOS_POSGRADO_ADM"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="797,37"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idInicializarConvocatoria1" Name="Inicializar Convocatoria">
+                    <Implementation>
+                        <Tool Id="exceptionOnNull" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"convocatoria_id"</ActualParameter>
+                                <ActualParameter>"errorConvocatoria"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"12"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="obtenerDatosConvocatoria" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$convocatoria_id</ActualParameter>
+                                <ActualParameter>"false"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesadoNIF</ActualParameter>
+                                <ActualParameter>interesado</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$interesado</ActualParameter>
+                                <ActualParameter>metadatoIdentificativoExpediente</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="comprobarPermisosInicio" Type="APPLICATION"/>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="482,83"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRegistrarSolicitud" Name="Registrar solicitud">
+                    <Implementation>
+                        <Tool Id="registraDocumento" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"E"</ActualParameter>
+                                <ActualParameter>"07-05 Solicitud Ayudas para Estudios de Master.odt"</ActualParameter>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"SOLICITUD"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1174,229"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idRealizarRegistro" Name="?Registrar?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra24"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra25"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1171,93"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idFINPRESENTASOLICITUD" Name="FIN PRESENTA SOLICITUD">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1461,95"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idAvisoSolicitudPresentada" Name="Aviso Solicitud Presentada">
+                    <Implementation>
+                        <Tool Id="mandaCorreoEspecifico" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>"MAIL.SOLICITUDPRESENTADA.ASUNTO"</ActualParameter>
+                                <ActualParameter>"MAIL.SOLICITUDPRESENTADA.CUERPO"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoUsuariosRol" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$convocatoria_rol</ActualParameter>
+                                <ActualParameter>"MAIL.AVISOADM.ASUNTO"</ActualParameter>
+                                <ActualParameter>"MAIL.AVISOADM.CUERPO"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1459,10"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idTipoDeLogado1" Name="?Tipo de logado?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra45"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra29"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="1681,11"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idDestinoSolicitudOficio" Name="?Destino Solicitud Oficio?">
+                    <Route/>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra47"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra49"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra50"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2362,109"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idSolicitudExcluidaDefinitiva1" Name="Excluida definitiva">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"excluida"</ActualParameter>
+                                <ActualParameter>resultadoDefinitivo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"24"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="2764,130"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idDividirRegistro" Name="DIVIDIR Registro">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra13"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra15"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3103,60"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idASubsanarDocumentoFuncionario" Name="6.0 Subsanar documentacion funcionario">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>GESTOR_CONVOCATORIA</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Manual/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                            <Split Type="XOR">
+                                <TransitionRefs>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra65"/>
+                                    <TransitionRef Id="idAyudasEstudiosMaster_tra56"/>
+                                </TransitionRefs>
+                            </Split>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="GESTOR_CONVOCATORIA"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3300,32"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idUnirRegistro" Name="UNIR Registro">
+                    <Implementation>
+                        <No/>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <TransitionRestrictions>
+                        <TransitionRestriction>
+                            <Join Type="XOR"/>
+                        </TransitionRestriction>
+                    </TransitionRestrictions>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3564,83"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idGenerarDocumentoAportacion2" Name="Generar Documento Aportacion">
+                    <Implementation>
+                        <Tool Id="cambiaTipoAnexoToArchivo" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"07-05 Aportacion Presencial de Documentacion.odt"</ActualParameter>
+                                <ActualParameter>""</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="cambiarDocumentosAdicionalesArchivosLibres" Type="APPLICATION"/>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"si"</ActualParameter>
+                                <ActualParameter>documentacionSubsanada</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"32"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="mandaCorreoEspecifico" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$mailAvisos</ActualParameter>
+                                <ActualParameter>"MAIL.SUBSANACIONPRESENTADA.ASUNTO"</ActualParameter>
+                                <ActualParameter>"MAIL.SUBSANACIONPRESENTADA.CUERPO"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>sistema</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="sistema"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3296,228"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+                <Activity Id="idSolicitudExcluidaDefinitiva11" Name="Excluida definitiva">
+                    <Implementation>
+                        <Tool Id="asignaValor" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>"excluida"</ActualParameter>
+                                <ActualParameter>resultadoDefinitivo</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                        <Tool Id="actualizaEtapaSituacion" Type="APPLICATION">
+                            <ActualParameters>
+                                <ActualParameter>$codigoProcedimiento</ActualParameter>
+                                <ActualParameter>"43"</ActualParameter>
+                            </ActualParameters>
+                        </Tool>
+                    </Implementation>
+                    <Performer>System2</Performer>
+                    <StartMode>
+                        <Automatic/>
+                    </StartMode>
+                    <FinishMode>
+                        <Automatic/>
+                    </FinishMode>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_PARTICIPANT_ID" Value="System2"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_OFFSET" Value="3818,113"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Activity>
+            </Activities>
+            <Transitions>
+                <Transition Id="idAyudasEstudiosMaster_tra1" From="AUTOINICIOCIUDADANOCERTIFICADO" To="idUNIR">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra3" From="idHayConvocatoria" To="idSeleccionConvocatoria">
+                    <Condition Type="CONDITION">$convocatoria_id = ""</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra4" From="idHayConvocatoria" To="idInicializarConvocatoria">
+                    <Condition Type="OTHERWISE"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra5" From="idSeleccionConvocatoria" To="idInicializarConvocatoria">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1122,252"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra6" From="idInicializarConvocatoria" To="idCumplimentarSolictud">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1307,413"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra7" From="idCumplimentarSolictud" To="idCerradoInactividad">
+                    <Condition Type="EXCEPTION">until($convocatoria_fechaFin)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1311,107-1610,105"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra8" From="idSeleccionConvocatoria" To="idCerradoInactividad">
+                    <Condition Type="EXCEPTION">wait(10,days)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="958,61-1643,62"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra9" From="idCerradoInactividad" To="idCerrarSolicitud">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra10" From="idCumplimentarSolictud" To="idAvisoSolicitudPresentada">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1337,362-1338,1012"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra11" From="idInicializarInteresado" To="idActualizaDestinatarioCiudadano">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra12" From="idActualizaDestinatarioCiudadano" To="idHayConvocatoria">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra30" From="idEstadoSolicitudRegistrada" To="idEsperaFinSolicitud">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra31" From="idEsperaFinSolicitud" To="idEstadoPendienteRevisarSolicitud">
+                    <Condition Type="EXCEPTION">until($convocatoria_fechaFin)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2007,1330-2008,1164"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra32" From="idEsperaFinSolicitud" To="idIFinsolicitud">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra33" From="idIFinsolicitud" To="idEstadoPendienteRevisarSolicitud">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2167,1446"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra34" From="idEstadoPendienteRevisarSolicitud" To="idRevisionProvisional">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra35" From="idRevisionProvisional" To="idIniciarSubsanacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra36" From="idRevisionProvisional" To="idResultadoProvisional">
+                    <Condition Type="EXCEPTION">until($convocatoria_inicioSubsanacion)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2159,472"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra37" From="idResultadoProvisional" To="idCorreoRevisionProvisional">
+                    <Condition Type="CONDITION">$resultadoProvisional = ""</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra38" From="idCorreoRevisionProvisional" To="idRevisionProvisional">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2367,755"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra39" From="idIniciarSubsanacion" To="idResultadoProvisional">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1908,459"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra40" From="idResultadoProvisional" To="idEstadoSubsanando">
+                    <Condition Type="CONDITION">$resultadoProvisional="excluidaSubsanable"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2386,389"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra41" From="idResultadoProvisional" To="idSolicitudAdmitidaDefinitiva">
+                    <Condition Type="CONDITION">$resultadoProvisional="admitida"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2583,465-2583,617"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra42" From="idResultadoProvisional" To="idCerradoDuplicado">
+                    <Condition Type="CONDITION">$resultadoProvisional="cancelada"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2538,481-2543,1044"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra43" From="idCerradoDuplicado" To="idAUTOFIN">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra44" From="idRevisionSubsanacion" To="idAUTOFIN">
+                    <Condition Type="EXCEPTION">until($convocatoria_publicacionDefinitiva)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra46" From="idSolicitudAdmitidaDefinitiva" To="idRevisionSubsanacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2783,750"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra48" From="idEstadoSubsanando" To="idDividirRegistro">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2995,384"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra52" From="idASubsanarDocumentoCiudadano" To="idUnirRegistro">
+                    <Condition Type="EXCEPTION">until($convocatoria_finSubsanacion)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3605,254"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra53" From="idASubsanarDocumentoCiudadano" To="idGenerarDocumentoAportacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra54" From="idGenerarDocumentoAportacion" To="idASubsanarDocumentoCiudadano">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra58" From="idEsSubsanada" To="idDocumentacionNoSubsanada">
+                    <Condition Type="CONDITION">$documentacionSubsanada = "no"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra59" From="idEsSubsanada" To="idDocumentacionSubsanada">
+                    <Condition Type="OTHERWISE"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra60" From="idDocumentacionSubsanada" To="idRevisionSubsanacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="4269,644-4122,644"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra61" From="idDocumentacionNoSubsanada" To="idRevisionSubsanacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3903,645-4087,645"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra62" From="idReiniciarSubsanacion" To="idEstadoSubsanando">
+                    <Condition Type="CONDITION">$convocatoria_modificaFecha="si"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2952,1002"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra63" From="idRevisionSubsanacion" To="idReiniciarSubsanacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="4086,993"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra64" From="idReiniciarSubsanacion" To="idRevisionSubsanacion">
+                    <Condition Type="OTHERWISE"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="4096,1007"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra17" From="idIniciarSubsanacion" To="idEstadoSolicitudRegistrada">
+                    <Condition Type="CONDITION">$convocatoria_modificaFecha="si"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra16" From="idAUTOINICIOFUNCIONARIO" To="idUNIR">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra18" From="idUNIR" To="idInicializar1">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra19" From="idInicializar1" To="idTipoDeLogado">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra20" From="idTipoDeLogado" To="idSeleccionConvocatoriaFuncionario">
+                    <Condition Type="OTHERWISE"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra21" From="idTipoDeLogado" To="idInicializarInteresado">
+                    <Condition Type="CONDITION">$tipoDeLogado="externo"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra2" From="idSeleccionConvocatoriaFuncionario" To="idInicializarConvocatoria1">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra14" From="idInicializarConvocatoria1" To="idCumplimentarSolicitudFuncionario">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="839,1062"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra23" From="idCumplimentarSolicitudFuncionario" To="idRealizarRegistro">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1210,868"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra24" From="idRealizarRegistro" To="idRegistrarSolicitud">
+                    <Condition Type="CONDITION">$registrarSolicitudOficio="si"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra25" From="idRealizarRegistro" To="idFINPRESENTASOLICITUD">
+                    <Condition Type="OTHERWISE"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra26" From="idRegistrarSolicitud" To="idFINPRESENTASOLICITUD">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1497,1209"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra27" From="idFINPRESENTASOLICITUD" To="idAvisoSolicitudPresentada">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra28" From="idAvisoSolicitudPresentada" To="idTipoDeLogado1">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra29" From="idTipoDeLogado1" To="idEstadoSolicitudRegistrada">
+                    <Condition Type="CONDITION">$tipoDeLogado="externo"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="1731,1101"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra45" From="idTipoDeLogado1" To="idDestinoSolicitudOficio">
+                    <Condition Type="OTHERWISE"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2398,1009"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra47" From="idDestinoSolicitudOficio" To="idEstadoSolicitudRegistrada">
+                    <Condition Type="OTHERWISE"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra49" From="idDestinoSolicitudOficio" To="idEstadoPendienteRevisarSolicitud">
+                    <Condition Type="CONDITION">$destinoSolicitudOficio="revisionProvisional"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2401,1162"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra50" From="idDestinoSolicitudOficio" To="idSolicitudExcluidaDefinitiva11">
+                    <Condition Type="CONDITION">$destinoSolicitudOficio="revisionDefinitiva"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3463,1095"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra51" From="idResultadoProvisional" To="idSolicitudExcluidaDefinitiva1">
+                    <Condition Type="CONDITION">$resultadoProvisional="excluidaNoSubsanable"</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="2626,449"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra55" From="idSolicitudExcluidaDefinitiva1" To="idRevisionSubsanacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3730,457-3732,732"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra13" From="idDividirRegistro" To="idASubsanarDocumentoCiudadano">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3138,253"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra15" From="idDividirRegistro" To="idASubsanarDocumentoFuncionario">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3146,710"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra56" From="idASubsanarDocumentoFuncionario" To="idGenerarDocumentoAportacion2">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra57" From="idGenerarDocumentoAportacion2" To="idASubsanarDocumentoFuncionario">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_SPLINE"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra65" From="idASubsanarDocumentoFuncionario" To="idUnirRegistro">
+                    <Condition Type="EXCEPTION">until($convocatoria_finSubsanacion)</Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3608,719"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra66" From="idUnirRegistro" To="idEsSubsanada">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="4091,412"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+                <Transition Id="idAyudasEstudiosMaster_tra22" From="idSolicitudExcluidaDefinitiva11" To="idRevisionSubsanacion">
+                    <Condition Type="CONDITION"></Condition>
+                    <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_BREAK_POINTS" Value="3869,763"></ExtendedAttribute>
+                        <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"></ExtendedAttribute>
+                    </ExtendedAttributes>
+                </Transition>
+            </Transitions>
+            <ExtendedAttributes xmlns="http://www.wfmc.org/2002/XPDL1.0">
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=ESTUDIOS_POSGRADO_ADM,CONNECTING_ACTIVITY_ID=idAUTOINICIOFUNCIONARIO,X_OFFSET=70,Y_OFFSET=55,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="StartOfWorkflow" Value="idAyudasEstudiosMaster_par1;"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=System2,CONNECTING_ACTIVITY_ID=idAUTOFIN,X_OFFSET=4252,Y_OFFSET=82,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="ciudadanoCertificado;Interesado;sistema;GESTOR_CONVOCATORIA;ESTUDIOS_POSGRADO_ADM;System2;rolFicticio"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=ciudadanoCertificado,CONNECTING_ACTIVITY_ID=AUTOINICIOCIUDADANOCERTIFICADO,X_OFFSET=73,Y_OFFSET=74,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=START_DEFAULT"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="StartOfWorkflow" Value="ciudadanoCertificado;"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=sistema,CONNECTING_ACTIVITY_ID=idCerrarSolicitud,X_OFFSET=1624,Y_OFFSET=272,JaWE_GRAPH_TRANSITION_STYLE=SIMPLE_ROUTING_BEZIER,TYPE=END_DEFAULT"></ExtendedAttribute>
+                <ExtendedAttribute xmlns="" Name="StartOfWorkflow" Value="ciudadanoCertificado;"></ExtendedAttribute>
+            </ExtendedAttributes>
+        </WorkflowProcess>
+    </WorkflowProcesses>
+</Package>
